@@ -8,7 +8,14 @@
    <datalistDefinitionList/>
    <builderDefinitionList/>
    <pluginDefaultPropertiesList/>
-   <environmentVariableList/>
+   <environmentVariableList>
+      <environmentVariable>
+         <id>razorpay_api_key</id>
+         <appId>playo</appId>
+         <value>rzp_test_zqVpNrsXNPDzeM</value>
+         <remarks></remarks>
+      </environmentVariable>
+   </environmentVariableList>
    <messageList/>
    <resourceList/>
    <license>cE3Y0hn2x3j3k5fVaYzsOoBkJot8MetsDvr9o8pWi2dM2HiMk9ceqw==</license>
