@@ -87,7 +87,7 @@
                         "style": "",
                         "id": "payment_status",
                         "placeholder": "",
-                        "value": "#form.game_paymentLink.payment_status#",
+                        "value": "#form.game_paymentList.payment_status#",
                         "readonlyLabel": "",
                         "storeNumeric": ""
                     }
