@@ -111,8 +111,8 @@
                             }
                         },
                         "workflowVariable": "",
-                        "label": "Game Details",
-                        "id": "game_details",
+                        "label": "Game List",
+                        "id": "game_list",
                         "value": "",
                         "readonlyLabel": ""
                     }
@@ -193,7 +193,7 @@
                             "className": "org.joget.apps.form.lib.WorkflowFormBinder",
                             "properties": {}
                         },
-                        "parentSubFormId": "game_details",
+                        "parentSubFormId": "game_list",
                         "noLoad": "",
                         "readonly": "true",
                         "subFormParentId": "",
