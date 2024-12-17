@@ -142,7 +142,7 @@
                 "totalAmount": "#form.game_payment.total_amount#",
                 "razorApiKey": "#appVariable.razorpay_api_key#",
                 "formDefId": "gamePaymentList",
-                "redirectUserviewMenuFormID": "game_order_confirmation",
+                "redirectUserviewMenuFormID": "payment_confirmation_page",
                 "paymentMethod": "RAZORPAY",
                 "apiSecret": "#appVariable.razorpay_api_secret#",
                 "currency": "#form.game_payment.currency#",
