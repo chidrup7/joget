@@ -23,37 +23,35 @@
             "label": "Email"
         },
         {
-            "name": "game_details",
-            "format": {
-                "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
-                "properties": {
-                    "optionsBinder": {
-                        "className": "org.joget.apps.form.lib.FormOptionsBinder",
-                        "properties": {
-                            "addEmptyOption": "true",
-                            "groupingColumn": "",
-                            "useAjax": "",
-                            "formDefId": "gameDetails",
-                            "labelColumn": "game",
-                            "extraCondition": "",
-                            "cacheInterval": "",
-                            "emptyLabel": "",
-                            "idColumn": "game"
-                        }
-                    },
-                    "options": []
-                }
-            },
+            "filterable": true,
+            "hidden": "false",
+            "name": "game_list",
             "id": "column_3",
-            "label": "Game Details"
+            "label": "Game List",
+            "sortable": "false"
         },
         {
             "filterable": true,
             "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Approval Status",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
             "name": "approval_status",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
             "id": "column_5",
-            "label": "approval_status",
-            "sortable": "false"
+            "alignment": ""
         },
         {
             "name": "date_from",
