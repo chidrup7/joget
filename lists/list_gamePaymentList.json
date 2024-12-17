@@ -1,4 +1,8 @@
 {
+    "template": {
+        "className": "",
+        "properties": {}
+    },
     "useSession": "false",
     "showPageSizeSelector": "true",
     "rowActions": [],
@@ -39,7 +43,20 @@
     "id": "list_gamePaymentList",
     "binder": {
         "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
-        "properties": {"formDefId": "gamePaymentList"}
+        "properties": {
+            "joins": [{
+                "joinFieldId": "id",
+                "tableName": "game_payment",
+                "fieldId": "game_payment.id"
+            }],
+            "aggregateField": [],
+            "formDefId": "gamePaymentList",
+            "customSelectionValue": "",
+            "extraCondition": "",
+            "filters": [],
+            "groupBy": "",
+            "functionColumns": []
+        }
     },
     "actions": [],
     "order": ""
