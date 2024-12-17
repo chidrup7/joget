@@ -97,7 +97,7 @@
                                 "extraCondition": "",
                                 "cacheInterval": "",
                                 "emptyLabel": "",
-                                "idColumn": "game"
+                                "idColumn": ""
                             }
                         },
                         "multiple": "",
