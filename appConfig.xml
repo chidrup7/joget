@@ -19,6 +19,7 @@
       <environmentVariable>
          <id>razorpay_api_secret</id>
          <appId>playo</appId>
+         <appVersion>1</appVersion>
          <value>087xZpXvdI6CoHz5igQcc2Jw</value>
          <remarks></remarks>
       </environmentVariable>
