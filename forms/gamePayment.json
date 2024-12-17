@@ -86,7 +86,7 @@
                         "autoPopulate": "",
                         "label": "",
                         "id": "game_payment_html",
-                        "value": "<a href=\"#form.game_paymentLink.razorpay_payment_link#\">Pay with Razorpay<\/a>"
+                        "value": "<a href=\"#form.game_paymentList.razorpay_payment_link#\">Pay with Razorpay<\/a>"
                     }
                 }
             ],
