@@ -176,6 +176,31 @@
                         "readonlyLabel": "",
                         "format24hr": "true"
                     }
+                },
+                {
+                    "className": "org.joget.plugin.enterprise.AjaxSubForm",
+                    "properties": {
+                        "permissionHidden": "",
+                        "collapsibleLabelCollapsed": "View Details",
+                        "noframe": "",
+                        "formDefId": "gameDetails",
+                        "collapsibleExpanded": "true",
+                        "collapsibleLabelExpanded": "Hide Details",
+                        "label": "Game Details",
+                        "ajax": "true",
+                        "collapsible": "",
+                        "storeBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "parentSubFormId": "game_details",
+                        "noLoad": "",
+                        "readonly": "true",
+                        "subFormParentId": "",
+                        "hideEmpty": "",
+                        "id": "game_details",
+                        "readonlyLabel": "true"
+                    }
                 }
             ],
             "className": "org.joget.apps.form.model.Column",
