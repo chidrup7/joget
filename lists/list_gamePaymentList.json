@@ -1,0 +1,46 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "razorpay_payment_link",
+            "id": "column_0",
+            "label": "razorpay_payment_link"
+        },
+        {
+            "name": "payment_status",
+            "id": "column_1",
+            "label": "payment_status"
+        },
+        {
+            "name": "razorpay_plugin_properties",
+            "id": "column_2",
+            "label": "razorpay_plugin_properties"
+        },
+        {
+            "name": "razorpay_payment_id",
+            "id": "column_3",
+            "label": "razorpay_payment_id"
+        },
+        {
+            "name": "razorpay_order_id",
+            "id": "column_4",
+            "label": "razorpay_order_id"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List - Game Payment List",
+    "id": "list_gamePaymentList",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "gamePaymentList"}
+    },
+    "actions": [],
+    "order": ""
+}
