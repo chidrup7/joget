@@ -1,4 +1,8 @@
 {
+    "template": {
+        "className": "",
+        "properties": {}
+    },
     "useSession": "false",
     "showPageSizeSelector": "true",
     "rowActions": [],
@@ -12,6 +16,14 @@
             "name": "details",
             "id": "column_1",
             "label": "Details"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "amount_per_hour",
+            "id": "column_3",
+            "label": "Amount per Hour",
+            "sortable": "false"
         },
         {
             "name": "availability",
