@@ -83,11 +83,38 @@
                 {
                     "className": "org.joget.apps.form.lib.SelectBox",
                     "properties": {
-                        "readonly": "False",
-                        "multiple": "False",
-                        "label": "Select Box",
-                        "id": "field4",
-                        "readonlyLabel": "False"
+                        "controlField": "",
+                        "readonly": "",
+                        "size": "",
+                        "optionsBinder": {
+                            "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                            "properties": {
+                                "addEmptyOption": "true",
+                                "groupingColumn": "",
+                                "useAjax": "",
+                                "formDefId": "gameDetails",
+                                "labelColumn": "game",
+                                "extraCondition": "",
+                                "cacheInterval": "",
+                                "emptyLabel": "",
+                                "idColumn": "game"
+                            }
+                        },
+                        "multiple": "",
+                        "options": [],
+                        "validator": {
+                            "className": "org.joget.apps.form.lib.DefaultValidator",
+                            "properties": {
+                                "type": "",
+                                "message": "Select a game",
+                                "mandatory": "true"
+                            }
+                        },
+                        "workflowVariable": "",
+                        "label": "Game Details",
+                        "id": "game_details",
+                        "value": "",
+                        "readonlyLabel": ""
                     }
                 },
                 {
