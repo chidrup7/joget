@@ -267,6 +267,51 @@
                 "id": "category-186375fe-4088-45c7-bd59-e2458c48e1b4",
                 "label": "<i class=\"fa fa-tasks\"><\/i> Game Payment"
             }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.apps.userview.lib.FormMenu",
+                "properties": {
+                    "loadDataWithKey": "",
+                    "redirectUrlOnCancel": "",
+                    "actionOnCancel": "",
+                    "redirectTargetOnCancel": "top",
+                    "customFooter": "",
+                    "paramName": "",
+                    "enableOffline": "",
+                    "afterSavedReloadTarget": "true",
+                    "customId": "payment_confirmation_page",
+                    "showInPopupDialog": "",
+                    "readonly": "",
+                    "cancelButtonLabel": "",
+                    "actionAfterSaved": "",
+                    "id": "015569581D664FE72111926B2A06DA81",
+                    "redirectUrlAfterComplete": "",
+                    "fieldPassover": "",
+                    "formId": "gamePaymentConfirmationPage",
+                    "customHeader": "",
+                    "fieldPassoverMethod": "append",
+                    "redirectTargetOnComplete": "",
+                    "keyName": "",
+                    "label": "Payment Confirmation Page",
+                    "userviewCacheDuration": "20",
+                    "messageShowAfterComplete": "",
+                    "submitButtonLabel": "",
+                    "userviewCacheScope": "",
+                    "readonlyLabel": "true"
+                }
+            }],
+            "properties": {
+                "hide": "yes",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "label": "Redirection",
+                "id": "category-50ECED97BCA146868262C441248DE65D"
+            }
         }
     ],
     "properties": {
