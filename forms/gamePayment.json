@@ -122,11 +122,37 @@
     }],
     "className": "org.joget.apps.form.model.Form",
     "properties": {
-        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
         "name": "Game Payment",
         "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
         "id": "gamePayment",
-        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "postProcessor": {
+            "className": "org.joget.marketplace.PaymentProcessorTool",
+            "properties": {
+                "redirectUserviewMenu": "v",
+                "totalAmount": "#form.game_payment.total_amount#",
+                "razorApiKey": "#appVariable.razorpay_api_key#",
+                "formDefId": "gamePaymentList",
+                "redirectUserviewMenuFormID": "game_order_confirmation",
+                "paymentMethod": "RAZORPAY",
+                "apiSecret": "#appVariable.razorpay_api_secret#",
+                "currency": "#form.game_payment.currency#",
+                "productName": "Joget Inc."
+            }
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
         "tableName": "game_payment"
     }
 }
