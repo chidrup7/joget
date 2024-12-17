@@ -1,4 +1,8 @@
 {
+    "template": {
+        "className": "",
+        "properties": {}
+    },
     "useSession": "false",
     "showPageSizeSelector": "true",
     "rowActions": [],
@@ -42,6 +46,14 @@
             },
             "id": "column_3",
             "label": "Game Details"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "approval_status",
+            "id": "column_5",
+            "label": "approval_status",
+            "sortable": "false"
         },
         {
             "name": "date_from",
