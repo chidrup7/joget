@@ -128,6 +128,46 @@
                 "id": "category-5ad8620b-a65d-4eb3-8a7e-9386680632dd",
                 "label": "<i class='fa fa-tasks'><\/i>Manage Game Registration"
             }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [
+                {
+                    "className": "org.joget.plugin.enterprise.DataListInboxMenu",
+                    "properties": {
+                        "appFilter": "all",
+                        "list-customFooter": "",
+                        "assignment-customHeader": "",
+                        "processId": "approver_process",
+                        "assignment-customFooter": "",
+                        "id": "e86f7fb7-141c-4714-8317-e7638d9ce2e4",
+                        "label": "Inbox",
+                        "activityDefId": "",
+                        "rowCount": "true",
+                        "customId": "gameRegistration_inbox",
+                        "datalistId": "list_gameRegistration",
+                        "list-customHeader": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.RunProcess",
+                    "properties": {
+                        "messageShowAfterComplete": "",
+                        "runProcessDirectly": "Yes",
+                        "showInPopupDialog": "",
+                        "keyName": "",
+                        "id": "7ec7e0c7-7ad9-4d1a-b12d-8e5533523b47",
+                        "label": "Submit Game Registration",
+                        "processDefId": "gameRegistration_approver_process",
+                        "redirectUrlAfterComplete": "",
+                        "customId": "gameRegistration_submit"
+                    }
+                }
+            ],
+            "properties": {
+                "id": "category-1bb15e72-8dd9-4c70-b1f4-f37f3e247afd",
+                "label": "<i class='fa fa-users'><\/i> Game Registration Approval Process"
+            }
         }
     ],
     "properties": {
