@@ -86,7 +86,7 @@
                         "autoPopulate": "",
                         "label": "",
                         "id": "game_payment_html",
-                        "value": "\n<div>\n    <button\n    type=\"button\"\n    onclick=\"window.location.href='#form.game_paymentList.razorpay_payment_link#';\"\n    style=\"padding:10px 20px; background-color: #4CAF50; color:white; border:none; cursor: pointer; border-radius: 5px;\">\n        Pay with Razorpay\n    <\/button>\n    \n    <button\n    type=\"button\"\n    onclick=\"alert('Payment Failed');\"\n    style=\"padding:10px 20px; background-color: #f44336; color:white; border:none; cursor: pointer; border-radius: 5px;margin-left:10px\">\n        Cancel payment\n    <\/button>\n<\/div>\n\n<p>Resolved Link:#form.game_paymentList.razorpay_payment_link#<\/p>"
+                        "value": "\n<div>\n    <button\n    type=\"button\"\n    onclick=\"window.location.href='#form.game_paymentList.razorpay_payment_link#';\"\n    style=\"padding:10px 20px; background-color: #4CAF50; color:white; border:none; cursor: pointer; border-radius: 5px;\">\n        Pay with Razorpay\n    <\/button>\n    \n    <button\n    type=\"button\"\n    onclick=\"alert('Payment Failed');\"\n    style=\"padding:10px 20px; background-color: #f44336; color:white; border:none; cursor: pointer; border-radius: 5px;margin-left:10px\">\n        Cancel payment\n    <\/button>\n<\/div>\n"
                     }
                 }
             ],
