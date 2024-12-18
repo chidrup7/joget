@@ -230,7 +230,7 @@
                         "add-cancelButtonLabel": "",
                         "list-deleteFiles": "",
                         "add-customHeader": "",
-                        "edit-readonly": "yes",
+                        "edit-readonly": "",
                         "datalistId": "list_gamePaymentList",
                         "edit-nextButtonLabel": "",
                         "list-confirmation": "",
