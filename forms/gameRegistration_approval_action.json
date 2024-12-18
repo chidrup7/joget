@@ -85,15 +85,25 @@
                 {
                     "className": "org.joget.plugin.enterprise.RichTextEditorField",
                     "properties": {
+                        "mode": "",
+                        "editor": "",
+                        "permissionType": "",
                         "readonly": "",
                         "elementUniqueKey": "4918",
                         "validator": {
-                            "className": "",
-                            "properties": {}
+                            "className": "org.joget.apps.form.lib.DefaultValidator",
+                            "properties": {
+                                "type": "",
+                                "message": "",
+                                "mandatory": "true"
+                            }
                         },
+                        "customSettings": "",
                         "id": "remarks",
                         "label": "Remarks",
-                        "value": ""
+                        "placeholder": "",
+                        "value": "",
+                        "height": ""
                     }
                 }
             ],
