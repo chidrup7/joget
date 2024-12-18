@@ -341,7 +341,7 @@
         "userviewDescription": "",
         "userviewId": "v",
         "hideThisUserviewInAppCenter": "",
-        "userview_thumbnail": "",
+        "userview_thumbnail": "#appResource.playo_2.jpg#",
         "userview_category": "",
         "theme": {
             "className": "org.joget.apps.userview.lib.AjaxUniversalTheme",
