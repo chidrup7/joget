@@ -348,7 +348,7 @@
             "properties": {
                 "dx8navBadge": "",
                 "css": "",
-                "loginBackground": "",
+                "loginBackground": "#appResource.Screenshot_2024-12-18_145326.png#",
                 "dx8navLinkColor": "",
                 "disablePush": "",
                 "removeAssignmentTitle": "",
@@ -399,7 +399,7 @@
                 "dx8footerBackground": "",
                 "dx8headingFontColor": "",
                 "dx8primaryColor": "",
-                "darkMode": "",
+                "darkMode": "true",
                 "dx8navActiveLinkColor": "",
                 "inbox": ""
             }
