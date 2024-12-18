@@ -213,6 +213,14 @@
          <permissionClass></permissionClass>
          <permissionProperties>{&quot;permission&quot;: { &quot;className&quot;: &quot;&quot;, &quot;properties&quot;: {}}}</permissionProperties>
       </appResource>
+      <appResource>
+         <id>Screenshot_2024-12-18_145326.png</id>
+         <appId>playo</appId>
+         <appVersion>1</appVersion>
+         <filesize>252107</filesize>
+         <permissionClass></permissionClass>
+         <permissionProperties>{&quot;permission&quot;: { &quot;className&quot;: &quot;&quot;, &quot;properties&quot;: {}}}</permissionProperties>
+      </appResource>
    </resourceList>
    <license>cE3Y0hn2x3j3k5fVaYzsOoBkJot8MetsDvr9o8pWi2dM2HiMk9ceqw==</license>
 </appDefinition>
