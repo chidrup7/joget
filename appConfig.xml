@@ -10,6 +10,13 @@
    <pluginDefaultPropertiesList/>
    <environmentVariableList>
       <environmentVariable>
+         <id>counter</id>
+         <appId>playo</appId>
+         <appVersion>1</appVersion>
+         <value>5</value>
+         <remarks>Used for plugin: Id Generator Field</remarks>
+      </environmentVariable>
+      <environmentVariable>
          <id>razorpay_api_key</id>
          <appId>playo</appId>
          <appVersion>1</appVersion>
