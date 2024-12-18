@@ -8,29 +8,115 @@
     "rowActions": [],
     "columns": [
         {
-            "name": "razorpay_payment_link",
-            "id": "column_0",
-            "label": "razorpay_payment_link"
-        },
-        {
-            "name": "payment_status",
-            "id": "column_1",
-            "label": "payment_status"
-        },
-        {
-            "name": "razorpay_plugin_properties",
-            "id": "column_2",
-            "label": "razorpay_plugin_properties"
-        },
-        {
-            "name": "razorpay_payment_id",
-            "id": "column_3",
-            "label": "razorpay_payment_id"
-        },
-        {
-            "name": "razorpay_order_id",
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Invoice Number",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "game_payment.invoice_number",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
             "id": "column_4",
-            "label": "razorpay_order_id"
+            "alignment": ""
+        },
+        {
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Payment Status",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "payment_status",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_1",
+            "alignment": ""
+        },
+        {
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Razorpay Payment Link",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "razorpay_payment_link",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_0",
+            "alignment": ""
+        },
+        {
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Razorpay Plugin Properties",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "razorpay_plugin_properties",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_2",
+            "alignment": ""
+        },
+        {
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Razorpay Payment Id",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "razorpay_payment_id",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_3",
+            "alignment": ""
         }
     ],
     "pageSize": 0,
