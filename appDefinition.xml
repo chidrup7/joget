@@ -206,6 +206,14 @@
          <permissionProperties>{&quot;permission&quot;: { &quot;className&quot;: &quot;&quot;, &quot;properties&quot;: {}}}</permissionProperties>
       </appResource>
       <appResource>
+         <id>playo_5.png</id>
+         <appId>playo</appId>
+         <appVersion>1</appVersion>
+         <filesize>324708</filesize>
+         <permissionClass></permissionClass>
+         <permissionProperties>{&quot;permission&quot;: { &quot;className&quot;: &quot;&quot;, &quot;properties&quot;: {}}}</permissionProperties>
+      </appResource>
+      <appResource>
          <id>Playo-Filled-Logo-1.png</id>
          <appId>playo</appId>
          <appVersion>1</appVersion>
