@@ -179,6 +179,7 @@
                     </ExtendedAttributes>
                 </Transition>
                 <Transition From="payment" Id="transition11" To="payment_done_email">
+                    <Condition Type="CONDITION">status == "success"</Condition>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
