@@ -541,6 +541,62 @@
                 "id": "category-6a36c72e-cab9-4f3e-b099-c1b71a364e1e",
                 "label": "<i class='fa fa-tasks'><\/i>Manage Game Payment"
             }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.plugin.enterprise.CrudMenu",
+                "properties": {
+                    "list-customFooter": "",
+                    "add-afterSavedRedirectUrl": "",
+                    "edit-customHeader": "",
+                    "editFormId": "gamePaymentList",
+                    "edit-afterSavedRedirectParamName": "",
+                    "edit-saveButtonLabel": "",
+                    "list-showDeleteButton": "yes",
+                    "list-newButtonLabel": "",
+                    "edit-afterSavedRedirectUrl": "",
+                    "edit-prevButtonLabel": "",
+                    "add-afterSavedRedirectParamName": "",
+                    "customId": "gamePaymentList_crud",
+                    "edit-afterSaved": "list",
+                    "list-deleteButtonLabel": "",
+                    "checkboxPosition": "left",
+                    "selectionType": "multiple",
+                    "add-customFooter": "",
+                    "addFormId": "gamePaymentList",
+                    "edit-allowRecordTraveling": "",
+                    "id": "301cff69-dc35-4fae-a8ff-a0586710e836",
+                    "rowCount": "true",
+                    "add-messageShowAfterComplete": "",
+                    "edit-readonlyLabel": "",
+                    "list-editLinkLabel": "",
+                    "add-cancelButtonLabel": "",
+                    "edit-afterSavedRedirectParamvalue": "",
+                    "edit-customFooter": "",
+                    "keyName": "",
+                    "label": "Manage Game Payment List",
+                    "add-customHeader": "",
+                    "edit-lastButtonLabel": "",
+                    "edit-readonly": "",
+                    "buttonPosition": "bothLeft",
+                    "edit-firstButtonLabel": "",
+                    "datalistId": "list_gamePaymentList",
+                    "add-saveButtonLabel": "",
+                    "edit-nextButtonLabel": "",
+                    "edit-messageShowAfterComplete": "",
+                    "edit-moreActions": [],
+                    "list-moreActions": [],
+                    "add-afterSaved": "list",
+                    "edit-backButtonLabel": "",
+                    "add-afterSavedRedirectParamvalue": "",
+                    "list-customHeader": ""
+                }
+            }],
+            "properties": {
+                "id": "category-73cbe82b-b48d-490e-9418-7fc3d78b0d6d",
+                "label": "<i class='fa fa-tasks'><\/i>Manage Game Payment List"
+            }
         }
     ],
     "properties": {
