@@ -234,7 +234,7 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="323,32"/>
                     </ExtendedAttributes>
                 </Activity>
-                <Activity Id="activity1" Name="Activity 1">
+                <Activity Id="enter_otp" Name="Enter OTP">
                     <Implementation>
                         <No/>
                     </Implementation>
@@ -299,12 +299,12 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
-                <Transition From="otp_to_mail" Id="transition3" To="activity1">
+                <Transition From="otp_to_mail" Id="transition3" To="enter_otp">
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
-                <Transition From="activity1" Id="transition4" To="otp_validation">
+                <Transition From="enter_otp" Id="transition4" To="otp_validation">
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
