@@ -229,8 +229,14 @@
                 }
             }],
             "properties": {
+                "hide": "yes",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
                 "id": "category-76675132-cb47-48f5-8c8c-ec3dfeb8a8fd",
-                "label": "<i class='fa fa-tasks'><\/i>Manage User Login"
+                "label": "<i class=\"fa fa-tasks\"><\/i> Manage User Login"
             }
         },
         {
@@ -285,8 +291,14 @@
                 }
             }],
             "properties": {
+                "hide": "yes",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
                 "id": "category-5639f852-304c-4986-ade7-cf351460d7a1",
-                "label": "<i class='fa fa-tasks'><\/i>Manage User Login"
+                "label": "<i class=\"fa fa-tasks\"><\/i> Manage User Login"
             }
         }
     ],
