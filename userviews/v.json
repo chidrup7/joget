@@ -135,16 +135,24 @@
                 {
                     "className": "org.joget.apps.userview.lib.RunProcess",
                     "properties": {
-                        "userviewCacheDuration": "20",
                         "runProcessDirectly": "Yes",
-                        "showInPopupDialog": "No",
                         "fieldPassoverMethod": "append",
+                        "keyName": "",
+                        "label": "Login",
+                        "redirectTarget": "",
+                        "enableOffline": "",
+                        "afterSavedReloadTarget": "true",
+                        "customId": "login",
+                        "userviewCacheDuration": "20",
+                        "messageShowAfterComplete": "",
+                        "showInPopupDialog": "",
                         "userviewCacheScope": "",
                         "actionAfterSaved": "",
-                        "label": "Run Process",
-                        "redirectTarget": "",
+                        "runProcessSubmitLabel": "",
                         "id": "E3BCFA52E3C94370F9F872C232EF6C53",
-                        "afterSavedReloadTarget": "true"
+                        "processDefId": "login_user",
+                        "redirectUrlAfterComplete": "",
+                        "fieldPassover": ""
                     }
                 }
             ],
