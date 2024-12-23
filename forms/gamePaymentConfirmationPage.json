@@ -259,7 +259,7 @@
                             "style": "",
                             "id": "payment_status",
                             "placeholder": "",
-                            "value": "#form.trailGameame_paymentList.payment_status#",
+                            "value": "#form.trailGame_paymentList.payment_status#",
                             "readonlyLabel": "",
                             "storeNumeric": ""
                         }
