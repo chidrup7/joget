@@ -408,24 +408,44 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="396,45"/>
                     </ExtendedAttributes>
                 </Activity>
-                <Activity Id="email_on_approved" Name="Email on Approved">
+                <Activity Id="request_approved_email" Name="Request Approved Email">
                     <Implementation>
                         <Tool Id="default_application"/>
                     </Implementation>
                     <Performer>gameRegistration_approver</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="811,13"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="751,4"/>
                     </ExtendedAttributes>
                 </Activity>
-                <Activity Id="email_on_rejected" Name="Email on Rejected">
+                <Activity Id="request_rejected_email" Name="Request Rejected Email">
                     <Implementation>
                         <Tool Id="default_application"/>
                     </Implementation>
                     <Performer>gameRegistration_approver</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="804,124"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="736,128"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="payment" Name="Payment">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>gameRegistration_applicant</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_applicant"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="804,22"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="payment_done_email" Name="Payment Done Email">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>gameRegistration_applicant</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_applicant"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="970,64"/>
                     </ExtendedAttributes>
                 </Activity>
             </Activities>
@@ -456,14 +476,25 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
-                <Transition From="route1" Id="transition6" To="email_on_approved">
+                <Transition From="route1" Id="transition6" To="request_approved_email">
                     <Condition Type="CONDITION">status == "Approved"</Condition>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
-                <Transition From="route1" Id="transition7" To="email_on_rejected">
+                <Transition From="route1" Id="transition7" To="request_rejected_email">
                     <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="request_approved_email" Id="transition_end_email_on_approved" To="payment">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="payment" Id="transition11" To="payment_done_email">
+                    <Condition Type="CONDITION">status == "success"</Condition>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
@@ -472,8 +503,8 @@
             <ExtendedAttributes>
                 <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="gameRegistration_applicant;gameRegistration_approver"/>
                 <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_applicant,CONNECTING_ACTIVITY_ID=raise_request,X_OFFSET=55,Y_OFFSET=51,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_approver,CONNECTING_ACTIVITY_ID=email_on_approved,X_OFFSET=1015,Y_OFFSET=33,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_approver,CONNECTING_ACTIVITY_ID=email_on_rejected,X_OFFSET=1021,Y_OFFSET=138,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_approver,CONNECTING_ACTIVITY_ID=payment_done_email,X_OFFSET=1015,Y_OFFSET=33,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_approver,CONNECTING_ACTIVITY_ID=request_rejected_email,X_OFFSET=1021,Y_OFFSET=138,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
             </ExtendedAttributes>
         </WorkflowProcess>
     </WorkflowProcesses>

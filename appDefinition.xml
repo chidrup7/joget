@@ -75,11 +75,11 @@
                </packageActivityForm>
             </entry>
             <entry>
-               <string>login_user::runProcess</string>
+               <string>gameRegistration_approver_process::payment</string>
                <packageActivityForm>
-                  <processDefId>login_user</processDefId>
-                  <activityDefId>runProcess</activityDefId>
-                  <formId>userLogin</formId>
+                  <processDefId>gameRegistration_approver_process</processDefId>
+                  <activityDefId>payment</activityDefId>
+                  <formId>gamePayment</formId>
                   <type>SINGLE</type>
                   <autoContinue>false</autoContinue>
                   <disableSaveAsDraft>false</disableSaveAsDraft>
@@ -97,11 +97,11 @@
                </packageActivityForm>
             </entry>
             <entry>
-               <string>gameRegistration_approver_process::activity3</string>
+               <string>login_user::runProcess</string>
                <packageActivityForm>
-                  <processDefId>gameRegistration_approver_process</processDefId>
-                  <activityDefId>activity3</activityDefId>
-                  <formId></formId>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>runProcess</activityDefId>
+                  <formId>userLogin</formId>
                   <type>SINGLE</type>
                   <autoContinue>false</autoContinue>
                   <disableSaveAsDraft>false</disableSaveAsDraft>
@@ -125,15 +125,6 @@
                   <activityDefId>email_on_rejected</activityDefId>
                   <pluginName>org.joget.apps.app.lib.EmailTool</pluginName>
                   <pluginProperties>{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trailGame_signup.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Your Application Has Been Rejected&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;createNewUser_applicant&quot;,&quot;message&quot;:&quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been rejected on #date.dd/MM/yyyy hh:mm a#.\n\n==  This is a system generated message. ==&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%N3oe8CkK40oCyigMcrYE0Qr3Wtn+0Wy9%%%%&quot;,&quot;storepass&quot;:&quot;%%%%X3wjdSCd3B4TnYWOR0F+9g==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;files&quot;:[],&quot;alias&quot;:&quot;&quot;,&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}</pluginProperties>
-               </packageActivityPlugin>
-            </entry>
-            <entry>
-               <string>gameRegistration_approver_process::email_on_approved</string>
-               <packageActivityPlugin>
-                  <processDefId>gameRegistration_approver_process</processDefId>
-                  <activityDefId>email_on_approved</activityDefId>
-                  <pluginName>org.joget.apps.app.lib.EmailTool</pluginName>
-                  <pluginProperties>{     &quot;host&quot;: &quot;&quot;,     &quot;port&quot;: &quot;&quot;,     &quot;security&quot;: &quot;&quot;,     &quot;username&quot;: &quot;&quot;,     &quot;password&quot;: &quot;&quot;,     &quot;from&quot;: &quot;&quot;,     &quot;toSpecific&quot;: &quot;&quot;,     &quot;toParticipantId&quot;: &quot;gameRegistration_applicant&quot;,     &quot;cc&quot;: &quot;&quot;,     &quot;subject&quot;: &quot;Your Application Has Been Approved&quot;,     &quot;message&quot;: &quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been approved on #date.dd\/MM\/yyyy hh:mm a#.\n\n==  This is a system generated message. == &quot;,     &quot;isHtml&quot;: &quot;true&quot;,     &quot;formDefId&quot;: &quot;&quot;,     &quot;fields&quot;: [],     &quot;files&quot;: [] }</pluginProperties>
                </packageActivityPlugin>
             </entry>
             <entry>
@@ -164,12 +155,21 @@
                </packageActivityPlugin>
             </entry>
             <entry>
-               <string>gameRegistration_approver_process::email_on_rejected</string>
+               <string>gameRegistration_approver_process::request_approved_email</string>
                <packageActivityPlugin>
                   <processDefId>gameRegistration_approver_process</processDefId>
-                  <activityDefId>email_on_rejected</activityDefId>
-                  <pluginName>org.joget.apps.app.lib.EmailTool</pluginName>
-                  <pluginProperties>{     &quot;host&quot;: &quot;&quot;,     &quot;port&quot;: &quot;&quot;,     &quot;security&quot;: &quot;&quot;,     &quot;username&quot;: &quot;&quot;,     &quot;password&quot;: &quot;&quot;,     &quot;from&quot;: &quot;&quot;,     &quot;toSpecific&quot;: &quot;&quot;,     &quot;toParticipantId&quot;: &quot;gameRegistration_applicant&quot;,     &quot;cc&quot;: &quot;&quot;,     &quot;subject&quot;: &quot;Your Application Has Been Rejected&quot;,     &quot;message&quot;: &quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been rejected on #date.dd\/MM\/yyyy hh:mm a#.\n\n==  This is a system generated message. == &quot;,     &quot;isHtml&quot;: &quot;true&quot;,     &quot;formDefId&quot;: &quot;&quot;,     &quot;fields&quot;: [],     &quot;files&quot;: [] }</pluginProperties>
+                  <activityDefId>request_approved_email</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{&quot;runInMultiThread&quot;:&quot;&quot;,&quot;comment&quot;:&quot;&quot;,&quot;tools&quot;:[{&quot;className&quot;:&quot;org.joget.apps.app.lib.EmailTool&quot;,&quot;properties&quot;:{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trainGame_reg.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Your Application Has Been Approved&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;gameRegistration_applicant&quot;,&quot;message&quot;:&quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been approved on #date.dd/MM/yyyy hh:mm a#.\n\n==  This is a system generated message. ==&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;&quot;,&quot;password&quot;:&quot;%%%%Igk8Jvmu3Vrceh0A1roafg==%%%%&quot;,&quot;storepass&quot;:&quot;%%%%Igk8Jvmu3Vrceh0A1roafg==%%%%&quot;,&quot;port&quot;:&quot;&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;host&quot;:&quot;&quot;,&quot;alias&quot;:&quot;&quot;,&quot;files&quot;:[],&quot;from&quot;:&quot;&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;&quot;}}]}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>gameRegistration_approver_process::request_rejected_email</string>
+               <packageActivityPlugin>
+                  <processDefId>gameRegistration_approver_process</processDefId>
+                  <activityDefId>request_rejected_email</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{&quot;runInMultiThread&quot;:&quot;&quot;,&quot;comment&quot;:&quot;&quot;,&quot;tools&quot;:[{&quot;className&quot;:&quot;org.joget.apps.app.lib.EmailTool&quot;,&quot;properties&quot;:{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trainGame_reg.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Your Application Has Been Rejected&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;gameRegistration_applicant&quot;,&quot;message&quot;:&quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been rejected on #date.dd/MM/yyyy hh:mm a#.\n\n==  This is a system generated message. ==&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;&quot;,&quot;password&quot;:&quot;%%%%Igk8Jvmu3Vrceh0A1roafg==%%%%&quot;,&quot;storepass&quot;:&quot;%%%%Igk8Jvmu3Vrceh0A1roafg==%%%%&quot;,&quot;port&quot;:&quot;&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;host&quot;:&quot;&quot;,&quot;alias&quot;:&quot;&quot;,&quot;files&quot;:[],&quot;from&quot;:&quot;&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;&quot;}}]}</pluginProperties>
                </packageActivityPlugin>
             </entry>
             <entry>
@@ -242,6 +242,24 @@
                   <activityDefId>email_on_received</activityDefId>
                   <pluginName>org.joget.apps.app.lib.EmailTool</pluginName>
                   <pluginProperties>{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trailGame_signup.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Your Application Has Been Received&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;createNewUser_applicant&quot;,&quot;message&quot;:&quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been received on #date.dd/MM/yyyy hh:mm a#.\n\n==  This is a system generated message. ==&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%N3oe8CkK40oCyigMcrYE0Qr3Wtn+0Wy9%%%%&quot;,&quot;storepass&quot;:&quot;%%%%X3wjdSCd3B4TnYWOR0F+9g==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;files&quot;:[],&quot;alias&quot;:&quot;&quot;,&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>gameRegistration_approver_process::tool5</string>
+               <packageActivityPlugin>
+                  <processDefId>gameRegistration_approver_process</processDefId>
+                  <activityDefId>tool5</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>gameRegistration_approver_process::payment_done_email</string>
+               <packageActivityPlugin>
+                  <processDefId>gameRegistration_approver_process</processDefId>
+                  <activityDefId>payment_done_email</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{&quot;runInMultiThread&quot;:&quot;&quot;,&quot;comment&quot;:&quot;&quot;,&quot;tools&quot;:[{&quot;className&quot;:&quot;org.joget.apps.app.lib.EmailTool&quot;,&quot;properties&quot;:{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trainGame_reg.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Payment done&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;&quot;,&quot;message&quot;:&quot;Payment done&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;&quot;,&quot;password&quot;:&quot;%%%%Igk8Jvmu3Vrceh0A1roafg==%%%%&quot;,&quot;storepass&quot;:&quot;%%%%Igk8Jvmu3Vrceh0A1roafg==%%%%&quot;,&quot;port&quot;:&quot;&quot;,&quot;isHtml&quot;:&quot;&quot;,&quot;host&quot;:&quot;&quot;,&quot;alias&quot;:&quot;&quot;,&quot;files&quot;:[],&quot;from&quot;:&quot;&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;&quot;}}]}</pluginProperties>
                </packageActivityPlugin>
             </entry>
          </packageActivityPluginMap>
