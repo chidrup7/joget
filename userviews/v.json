@@ -115,6 +115,49 @@
                 "id": "category-811e95a7-bd51-4f0c-aa85-dbc984d25c62",
                 "label": "<i class='fa fa-users'><\/i> Create New User Approval Process"
             }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [
+                {
+                    "className": "org.joget.plugin.enterprise.DataListInboxMenu",
+                    "properties": {
+                        "appFilter": "all",
+                        "userviewCacheDuration": "20",
+                        "userviewCacheScope": "",
+                        "showPopup": "false",
+                        "label": "List Inbox",
+                        "rowCount": "false",
+                        "id": "659CAAB7343A467137BFC1CC0C448805",
+                        "showDetail": "false"
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.RunProcess",
+                    "properties": {
+                        "userviewCacheDuration": "20",
+                        "runProcessDirectly": "Yes",
+                        "showInPopupDialog": "No",
+                        "fieldPassoverMethod": "append",
+                        "userviewCacheScope": "",
+                        "actionAfterSaved": "",
+                        "label": "Run Process",
+                        "redirectTarget": "",
+                        "id": "E3BCFA52E3C94370F9F872C232EF6C53",
+                        "afterSavedReloadTarget": "true"
+                    }
+                }
+            ],
+            "properties": {
+                "hide": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "label": "Login",
+                "id": "category-F5C135143C3C46DB6D8A6D9ACF3A0150"
+            }
         }
     ],
     "properties": {
