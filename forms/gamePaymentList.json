@@ -131,7 +131,7 @@
                 "className": "",
                 "properties": {}
             },
-            "label": "Razorpay Payment",
+            "label": "Razorpay Payment Link",
             "reverse": "",
             "storeBinder": {
                 "className": "",
@@ -145,7 +145,7 @@
                 "properties": {}
             },
             "comment": "",
-            "id": "section2",
+            "id": "razorpay_payment_link",
             "join": "",
             "readonlyLabel": ""
         }
