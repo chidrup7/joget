@@ -31,6 +31,17 @@
                </packageActivityForm>
             </entry>
             <entry>
+               <string>login_user::activity1</string>
+               <packageActivityForm>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>activity1</activityDefId>
+                  <formId>otpValidation</formId>
+                  <type>SINGLE</type>
+                  <autoContinue>false</autoContinue>
+                  <disableSaveAsDraft>false</disableSaveAsDraft>
+               </packageActivityForm>
+            </entry>
+            <entry>
                <string>createNewUser_approver_process::runProcess</string>
                <packageActivityForm>
                   <processDefId>createNewUser_approver_process</processDefId>
@@ -41,15 +52,80 @@
                   <disableSaveAsDraft>false</disableSaveAsDraft>
                </packageActivityForm>
             </entry>
+            <entry>
+               <string>login_user::runProcess</string>
+               <packageActivityForm>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>runProcess</activityDefId>
+                  <formId>userLogin</formId>
+                  <type>SINGLE</type>
+                  <autoContinue>false</autoContinue>
+                  <disableSaveAsDraft>false</disableSaveAsDraft>
+               </packageActivityForm>
+            </entry>
          </packageActivityFormMap>
          <packageActivityPluginMap>
             <entry>
-               <string>createNewUser_approver_process::email_on_approved</string>
+               <string>login_user::otp_validation</string>
+               <packageActivityPlugin>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>otp_validation</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{&quot;runInMultiThread&quot;:&quot;&quot;,&quot;comment&quot;:&quot;&quot;,&quot;tools&quot;:[{&quot;className&quot;:&quot;org.joget.apps.app.lib.BeanShellTool&quot;,&quot;properties&quot;:{&quot;script&quot;:&quot;import org.joget.workflow.model.service.*;\r\n\r\nvar enteredOtp = getVariable(#form.user_login.enter_otp#); // Get the OTP entered by the user\r\nvar storedOtp = getVariable(#variable.otpStr); // Get the OTP stored in the process variable\r\n\r\nWorkflowManager wm = (WorkflowManager) pluginManager.getBean(\&quot;workflowManager\&quot;);\r\n\r\nif (enteredOtp === storedOtp) {\r\n    // OTP is valid, proceed with login\r\n   wm.activityVariable(workflowAssignment.getActivityId(),\&quot;status\&quot;, \&quot;Approved\&quot;);\r\n} else {\r\n    // OTP is invalid\r\n    wm.activityVariable(workflowAssignment.getActivityId(),\&quot;status\&quot;, \&quot;Rejected\&quot;);\r\n}&quot;}}]}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>createNewUser_approver_process::email_on_rejected</string>
                <packageActivityPlugin>
                   <processDefId>createNewUser_approver_process</processDefId>
-                  <activityDefId>email_on_approved</activityDefId>
+                  <activityDefId>email_on_rejected</activityDefId>
                   <pluginName>org.joget.apps.app.lib.EmailTool</pluginName>
-                  <pluginProperties>{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trailGame_signup.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Your Application Has Been Approved&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;createNewUser_applicant&quot;,&quot;message&quot;:&quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been approved on #date.dd/MM/yyyy hh:mm a#.\n\n==  This is a system generated message. ==&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%N3oe8CkK40oCyigMcrYE0Qr3Wtn+0Wy9%%%%&quot;,&quot;storepass&quot;:&quot;%%%%X3wjdSCd3B4TnYWOR0F+9g==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;files&quot;:[],&quot;alias&quot;:&quot;&quot;,&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}</pluginProperties>
+                  <pluginProperties>{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trailGame_signup.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Your Application Has Been Rejected&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;createNewUser_applicant&quot;,&quot;message&quot;:&quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been rejected on #date.dd/MM/yyyy hh:mm a#.\n\n==  This is a system generated message. ==&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%N3oe8CkK40oCyigMcrYE0Qr3Wtn+0Wy9%%%%&quot;,&quot;storepass&quot;:&quot;%%%%X3wjdSCd3B4TnYWOR0F+9g==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;files&quot;:[],&quot;alias&quot;:&quot;&quot;,&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>login_user::login_success_email</string>
+               <packageActivityPlugin>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>login_success_email</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{&quot;runInMultiThread&quot;:&quot;&quot;,&quot;comment&quot;:&quot;&quot;,&quot;tools&quot;:[{&quot;className&quot;:&quot;org.joget.apps.app.lib.EmailTool&quot;,&quot;properties&quot;:{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trailGame_login.enter_email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Login Success&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;&quot;,&quot;message&quot;:&quot;Hi,\n\nYour login has been successful.\n\nThank you.&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%Xsz+TSFCzu7h9TpvWVBMGzPeoVOsNugP%%%%&quot;,&quot;storepass&quot;:&quot;%%%%rHwiYndDwnOp7p6GfA2+1Q==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;alias&quot;:&quot;&quot;,&quot;files&quot;:[],&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}}]}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>createNewUser_approver_process::update_status</string>
+               <packageActivityPlugin>
+                  <processDefId>createNewUser_approver_process</processDefId>
+                  <activityDefId>update_status</activityDefId>
+                  <pluginName>org.joget.plugin.enterprise.FormDataUpdateTool</pluginName>
+                  <pluginProperties>{&quot;formDefId&quot;:&quot;createNewUser_approval&quot;,&quot;fields&quot;:[{&quot;field&quot;:&quot;approval_status&quot;,&quot;value&quot;:&quot;#variable.status#&quot;}]}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>login_user::otp_generation</string>
+               <packageActivityPlugin>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>otp_generation</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{&quot;runInMultiThread&quot;:&quot;&quot;,&quot;comment&quot;:&quot;&quot;,&quot;tools&quot;:[{&quot;className&quot;:&quot;org.joget.apps.app.lib.BeanShellTool&quot;,&quot;properties&quot;:{&quot;script&quot;:&quot;\r\nimport org.joget.workflow.model.service.*;\r\n\r\n// // Generate OTP\r\nvar otp = Math.round(1000 + Math.random() * 9000);\r\n\r\nvar otpStr = otp.toString();\r\n\r\nWorkflowManager wm = (WorkflowManager) pluginManager.getBean(\&quot;workflowManager\&quot;);\r\nwm.activityVariable(workflowAssignment.getActivityId(),\&quot;status\&quot;, \&quot;Approved\&quot;);\r\n\r\nwm.activityVariable(workflowAssignment.getActivityId(),\&quot;otp\&quot;, otpStr);\r\n\r\n\r\n&quot;}}]}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>login_user::login_failed</string>
+               <packageActivityPlugin>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>login_failed</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{&quot;runInMultiThread&quot;:&quot;&quot;,&quot;comment&quot;:&quot;&quot;,&quot;tools&quot;:[{&quot;className&quot;:&quot;org.joget.apps.app.lib.EmailTool&quot;,&quot;properties&quot;:{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trailGame_login.enter_email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Login Failed&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;&quot;,&quot;message&quot;:&quot;Hi,\n\nYour Login has been failed.\n\nThank you.&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%Xsz+TSFCzu7h9TpvWVBMGzPeoVOsNugP%%%%&quot;,&quot;storepass&quot;:&quot;%%%%rHwiYndDwnOp7p6GfA2+1Q==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;alias&quot;:&quot;&quot;,&quot;files&quot;:[],&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}}]}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>login_user::otp_to_mail</string>
+               <packageActivityPlugin>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>otp_to_mail</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{&quot;runInMultiThread&quot;:&quot;&quot;,&quot;comment&quot;:&quot;&quot;,&quot;tools&quot;:[{&quot;className&quot;:&quot;org.joget.apps.app.lib.EmailTool&quot;,&quot;properties&quot;:{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trailGame_login.enter_email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;OTP for Login&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;&quot;,&quot;message&quot;:&quot;Hello,\n\nYour OTP for login is: #variable.otp#\n\nPlease use this code to complete your login process.\n\nBest regards,\nJoget Team&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%Xsz+TSFCzu7h9TpvWVBMGzPeoVOsNugP%%%%&quot;,&quot;storepass&quot;:&quot;%%%%rHwiYndDwnOp7p6GfA2+1Q==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;alias&quot;:&quot;&quot;,&quot;files&quot;:[],&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}}]}</pluginProperties>
                </packageActivityPlugin>
             </entry>
             <entry>
@@ -62,12 +138,12 @@
                </packageActivityPlugin>
             </entry>
             <entry>
-               <string>createNewUser_approver_process::email_on_rejected</string>
+               <string>createNewUser_approver_process::email_on_approved</string>
                <packageActivityPlugin>
                   <processDefId>createNewUser_approver_process</processDefId>
-                  <activityDefId>email_on_rejected</activityDefId>
+                  <activityDefId>email_on_approved</activityDefId>
                   <pluginName>org.joget.apps.app.lib.EmailTool</pluginName>
-                  <pluginProperties>{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trailGame_signup.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Your Application Has Been Rejected&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;createNewUser_applicant&quot;,&quot;message&quot;:&quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been rejected on #date.dd/MM/yyyy hh:mm a#.\n\n==  This is a system generated message. ==&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%N3oe8CkK40oCyigMcrYE0Qr3Wtn+0Wy9%%%%&quot;,&quot;storepass&quot;:&quot;%%%%X3wjdSCd3B4TnYWOR0F+9g==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;files&quot;:[],&quot;alias&quot;:&quot;&quot;,&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}</pluginProperties>
+                  <pluginProperties>{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trailGame_signup.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Your Application Has Been Approved&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;createNewUser_applicant&quot;,&quot;message&quot;:&quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been approved on #date.dd/MM/yyyy hh:mm a#.\n\n==  This is a system generated message. ==&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%N3oe8CkK40oCyigMcrYE0Qr3Wtn+0Wy9%%%%&quot;,&quot;storepass&quot;:&quot;%%%%X3wjdSCd3B4TnYWOR0F+9g==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;files&quot;:[],&quot;alias&quot;:&quot;&quot;,&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}</pluginProperties>
                </packageActivityPlugin>
             </entry>
             <entry>
@@ -89,12 +165,30 @@
                </packageActivityPlugin>
             </entry>
             <entry>
-               <string>createNewUser_approver_process::update_status</string>
+               <string>login_user::tool2</string>
                <packageActivityPlugin>
-                  <processDefId>createNewUser_approver_process</processDefId>
-                  <activityDefId>update_status</activityDefId>
-                  <pluginName>org.joget.plugin.enterprise.FormDataUpdateTool</pluginName>
-                  <pluginProperties>{&quot;formDefId&quot;:&quot;createNewUser_approval&quot;,&quot;fields&quot;:[{&quot;field&quot;:&quot;approval_status&quot;,&quot;value&quot;:&quot;#variable.status#&quot;}]}</pluginProperties>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>tool2</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>login_user::tool3</string>
+               <packageActivityPlugin>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>tool3</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>login_user::tool4</string>
+               <packageActivityPlugin>
+                  <processDefId>login_user</processDefId>
+                  <activityDefId>tool4</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{}</pluginProperties>
                </packageActivityPlugin>
             </entry>
          </packageActivityPluginMap>
@@ -115,6 +209,24 @@
                   <participantId>createNewUser_applicant</participantId>
                   <type>requester</type>
                   <value>runProcess</value>
+               </packageParticipant>
+            </entry>
+            <entry>
+               <string>process2::processStartWhiteList</string>
+               <packageParticipant>
+                  <processDefId>process2</processDefId>
+                  <participantId>processStartWhiteList</participantId>
+                  <type>role</type>
+                  <value>adminUser</value>
+               </packageParticipant>
+            </entry>
+            <entry>
+               <string>login_user::processStartWhiteList</string>
+               <packageParticipant>
+                  <processDefId>login_user</processDefId>
+                  <participantId>processStartWhiteList</participantId>
+                  <type>role</type>
+                  <value>adminUser</value>
                </packageParticipant>
             </entry>
             <entry>
