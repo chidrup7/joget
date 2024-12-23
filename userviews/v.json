@@ -507,7 +507,7 @@
                         "id": "F4F0965CDC8C4DD2311E104757F25601",
                         "redirectUrlAfterComplete": "",
                         "fieldPassover": "",
-                        "formId": "gameRegistration_clarification",
+                        "formId": "gamePaymentConfirmationPage",
                         "customHeader": "",
                         "fieldPassoverMethod": "append",
                         "redirectTargetOnComplete": "",
