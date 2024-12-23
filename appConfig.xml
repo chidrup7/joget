@@ -1,0 +1,14 @@
+<appDefinition>
+   <id>trailGameApp</id>
+   <version></version>
+   <name>Train Game Application</name>
+   <packageDefinitionList/>
+   <formDefinitionList/>
+   <userviewDefinitionList/>
+   <datalistDefinitionList/>
+   <builderDefinitionList/>
+   <pluginDefaultPropertiesList/>
+   <environmentVariableList/>
+   <messageList/>
+   <resourceList/>
+</appDefinition>
