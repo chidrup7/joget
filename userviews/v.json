@@ -455,70 +455,6 @@
         },
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
-            "menus": [{
-                "className": "org.joget.plugin.enterprise.CrudMenu",
-                "properties": {
-                    "list-customFooter": "",
-                    "edit-customHeader": "",
-                    "editFormId": "gamePaymentList",
-                    "cacheAllLinks": "",
-                    "edit-saveButtonLabel": "",
-                    "list-showDeleteButton": "",
-                    "list-newButtonLabel": "",
-                    "edit-prevButtonLabel": "",
-                    "enableOffline": "",
-                    "customId": "game_payment_list",
-                    "edit-afterSavedReloadTarget": "true",
-                    "edit-afterSaved": "list",
-                    "checkboxPosition": "left",
-                    "selectionType": "multiple",
-                    "add-customFooter": "",
-                    "addFormId": "gamePaymentList",
-                    "edit-allowRecordTraveling": "",
-                    "rowCount": "",
-                    "id": "297A6452854448CAAD213390B27CB19A",
-                    "edit-readonlyLabel": "true",
-                    "add-messageShowAfterComplete": "",
-                    "list-editLinkLabel": "",
-                    "add-cancelButtonLabel": "",
-                    "edit-customFooter": "",
-                    "add-afterSavedReloadTarget": "true",
-                    "keyName": "",
-                    "label": "Game Payment List",
-                    "list-newLinkTarget": "",
-                    "add-customHeader": "",
-                    "edit-lastButtonLabel": "",
-                    "edit-readonly": "",
-                    "buttonPosition": "bothLeft",
-                    "edit-firstButtonLabel": "",
-                    "datalistId": "list_gamePaymentList",
-                    "add-saveButtonLabel": "",
-                    "edit-nextButtonLabel": "",
-                    "userviewCacheDuration": "20",
-                    "edit-messageShowAfterComplete": "",
-                    "cacheListAction": "",
-                    "userviewCacheScope": "",
-                    "edit-moreActions": [],
-                    "add-afterSaved": "list",
-                    "list-moreActions": [],
-                    "edit-backButtonLabel": "",
-                    "list-editLinkTarget": "",
-                    "list-customHeader": ""
-                }
-            }],
-            "properties": {
-                "hide": "",
-                "permission": {
-                    "className": "",
-                    "properties": {}
-                },
-                "comment": "",
-                "label": "Game Payment",
-                "id": "category-BDB0D3051ED745CB74805AC2BF65B513"
-            }
-        },
-        {
-            "className": "org.joget.apps.userview.model.UserviewCategory",
             "menus": [
                 {
                     "className": "org.joget.apps.userview.lib.FormMenu",
@@ -604,62 +540,6 @@
                     "list-customFooter": "",
                     "add-afterSavedRedirectUrl": "",
                     "edit-customHeader": "",
-                    "editFormId": "gamePayment",
-                    "edit-afterSavedRedirectParamName": "",
-                    "edit-saveButtonLabel": "",
-                    "list-showDeleteButton": "yes",
-                    "list-newButtonLabel": "",
-                    "edit-afterSavedRedirectUrl": "",
-                    "edit-prevButtonLabel": "",
-                    "add-afterSavedRedirectParamName": "",
-                    "customId": "gamePayment_crud",
-                    "edit-afterSaved": "list",
-                    "list-deleteButtonLabel": "",
-                    "checkboxPosition": "left",
-                    "selectionType": "multiple",
-                    "add-customFooter": "",
-                    "addFormId": "gamePayment",
-                    "edit-allowRecordTraveling": "",
-                    "id": "369dd3e7-6a99-4a9e-945e-384cc040a84a",
-                    "rowCount": "true",
-                    "add-messageShowAfterComplete": "",
-                    "edit-readonlyLabel": "",
-                    "list-editLinkLabel": "",
-                    "add-cancelButtonLabel": "",
-                    "edit-afterSavedRedirectParamvalue": "",
-                    "edit-customFooter": "",
-                    "keyName": "",
-                    "label": "Manage Game Payment",
-                    "add-customHeader": "",
-                    "edit-lastButtonLabel": "",
-                    "edit-readonly": "",
-                    "buttonPosition": "bothLeft",
-                    "edit-firstButtonLabel": "",
-                    "datalistId": "list_gamePayment",
-                    "add-saveButtonLabel": "",
-                    "edit-nextButtonLabel": "",
-                    "edit-messageShowAfterComplete": "",
-                    "edit-moreActions": [],
-                    "list-moreActions": [],
-                    "add-afterSaved": "list",
-                    "edit-backButtonLabel": "",
-                    "add-afterSavedRedirectParamvalue": "",
-                    "list-customHeader": ""
-                }
-            }],
-            "properties": {
-                "id": "category-6a36c72e-cab9-4f3e-b099-c1b71a364e1e",
-                "label": "<i class='fa fa-tasks'><\/i>Manage Game Payment"
-            }
-        },
-        {
-            "className": "org.joget.apps.userview.model.UserviewCategory",
-            "menus": [{
-                "className": "org.joget.plugin.enterprise.CrudMenu",
-                "properties": {
-                    "list-customFooter": "",
-                    "add-afterSavedRedirectUrl": "",
-                    "edit-customHeader": "",
                     "editFormId": "gamePaymentList",
                     "edit-afterSavedRedirectParamName": "",
                     "edit-saveButtonLabel": "",
@@ -704,8 +584,14 @@
                 }
             }],
             "properties": {
+                "hide": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
                 "id": "category-73cbe82b-b48d-490e-9418-7fc3d78b0d6d",
-                "label": "<i class='fa fa-tasks'><\/i>Manage Game Payment List"
+                "label": "<i class=\"fa fa-tasks\"><\/i> Game Payment List"
             }
         }
     ],
