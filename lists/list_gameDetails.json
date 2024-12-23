@@ -1,0 +1,62 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "game",
+            "id": "column_0",
+            "label": "Game"
+        },
+        {
+            "name": "details",
+            "id": "column_1",
+            "label": "Details"
+        },
+        {
+            "name": "amount_per_hour",
+            "id": "column_2",
+            "label": "Amount per Hour"
+        },
+        {
+            "name": "availability",
+            "format": {
+                "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+                "properties": {
+                    "optionsBinder": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "value": "Yes",
+                            "grouping": ""
+                        },
+                        {
+                            "label": "No",
+                            "value": "No",
+                            "grouping": ""
+                        }
+                    ]
+                }
+            },
+            "id": "column_3",
+            "label": "Availability"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List - Game Details",
+    "id": "list_gameDetails",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "gameDetails"}
+    },
+    "actions": [],
+    "order": ""
+}
