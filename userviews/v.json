@@ -120,6 +120,29 @@
             "className": "org.joget.apps.userview.model.UserviewCategory",
             "menus": [
                 {
+                    "className": "org.joget.apps.userview.lib.RunProcess",
+                    "properties": {
+                        "runProcessDirectly": "Yes",
+                        "fieldPassoverMethod": "append",
+                        "keyName": "",
+                        "label": "Login",
+                        "redirectTarget": "",
+                        "enableOffline": "",
+                        "afterSavedReloadTarget": "true",
+                        "customId": "login",
+                        "userviewCacheDuration": "20",
+                        "messageShowAfterComplete": "",
+                        "showInPopupDialog": "",
+                        "userviewCacheScope": "",
+                        "actionAfterSaved": "",
+                        "runProcessSubmitLabel": "",
+                        "id": "67BB3E184FC04F760872D18CF241551C",
+                        "processDefId": "login_user",
+                        "redirectUrlAfterComplete": "",
+                        "fieldPassover": ""
+                    }
+                },
+                {
                     "className": "org.joget.plugin.enterprise.DataListInboxMenu",
                     "properties": {
                         "appFilter": "all",
@@ -140,29 +163,6 @@
                         "rowCount": "",
                         "id": "659CAAB7343A467137BFC1CC0C448805",
                         "list-customHeader": ""
-                    }
-                },
-                {
-                    "className": "org.joget.apps.userview.lib.RunProcess",
-                    "properties": {
-                        "runProcessDirectly": "Yes",
-                        "fieldPassoverMethod": "append",
-                        "keyName": "",
-                        "label": "Login",
-                        "redirectTarget": "",
-                        "enableOffline": "",
-                        "afterSavedReloadTarget": "true",
-                        "customId": "login",
-                        "userviewCacheDuration": "20",
-                        "messageShowAfterComplete": "",
-                        "showInPopupDialog": "",
-                        "userviewCacheScope": "",
-                        "actionAfterSaved": "",
-                        "runProcessSubmitLabel": "",
-                        "id": "E3BCFA52E3C94370F9F872C232EF6C53",
-                        "processDefId": "login_user",
-                        "redirectUrlAfterComplete": "",
-                        "fieldPassover": ""
                     }
                 }
             ],
