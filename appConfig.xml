@@ -19,7 +19,14 @@
       <environmentVariable>
          <id>razorpay_api_key</id>
          <appId>trailGameApp</appId>
+         <appVersion>1</appVersion>
          <value>rzp_test_zqVpNrsXNPDzeM</value>
+         <remarks></remarks>
+      </environmentVariable>
+      <environmentVariable>
+         <id>razorpay_api_secret</id>
+         <appId>trailGameApp</appId>
+         <value>087xZpXvdI6CoHz5igQcc2Jw</value>
          <remarks></remarks>
       </environmentVariable>
    </environmentVariableList>
