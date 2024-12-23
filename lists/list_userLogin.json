@@ -1,0 +1,24 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [{
+        "name": "enter_email",
+        "id": "column_0",
+        "label": "Enter Email"
+    }],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List - User Login",
+    "id": "list_userLogin",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "userLogin"}
+    },
+    "actions": [],
+    "order": ""
+}
