@@ -520,6 +520,51 @@
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
             "menus": [{
+                "className": "org.joget.apps.userview.lib.FormMenu",
+                "properties": {
+                    "loadDataWithKey": "",
+                    "redirectUrlOnCancel": "",
+                    "actionOnCancel": "",
+                    "redirectTargetOnCancel": "top",
+                    "customFooter": "",
+                    "paramName": "",
+                    "enableOffline": "",
+                    "afterSavedReloadTarget": "true",
+                    "customId": "payment_form",
+                    "showInPopupDialog": "",
+                    "readonly": "",
+                    "cancelButtonLabel": "",
+                    "actionAfterSaved": "",
+                    "id": "07FDD736FC5241B6E4DCD4F277FD21DA",
+                    "redirectUrlAfterComplete": "",
+                    "fieldPassover": "",
+                    "formId": "gamePayment",
+                    "customHeader": "",
+                    "fieldPassoverMethod": "append",
+                    "redirectTargetOnComplete": "",
+                    "keyName": "",
+                    "label": "Payment Form",
+                    "userviewCacheDuration": "20",
+                    "messageShowAfterComplete": "",
+                    "submitButtonLabel": "",
+                    "userviewCacheScope": "",
+                    "readonlyLabel": "true"
+                }
+            }],
+            "properties": {
+                "hide": "yes",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "label": "Redirection",
+                "id": "category-08A26C397E5440F276F2838A8735D2B8"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
                 "className": "org.joget.plugin.enterprise.CrudMenu",
                 "properties": {
                     "list-customFooter": "",
