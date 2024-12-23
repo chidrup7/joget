@@ -132,13 +132,13 @@
                         "customId": "login",
                         "userviewCacheDuration": "20",
                         "messageShowAfterComplete": "",
-                        "showInPopupDialog": "",
+                        "showInPopupDialog": "Yes",
                         "userviewCacheScope": "",
                         "actionAfterSaved": "",
                         "runProcessSubmitLabel": "",
                         "id": "67BB3E184FC04F760872D18CF241551C",
                         "processDefId": "login_user",
-                        "redirectUrlAfterComplete": "",
+                        "redirectUrlAfterComplete": "/jw/web/userview/trailGameApp/v/_/inbox",
                         "fieldPassover": ""
                     }
                 },
