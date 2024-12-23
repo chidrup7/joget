@@ -123,13 +123,23 @@
                     "className": "org.joget.plugin.enterprise.DataListInboxMenu",
                     "properties": {
                         "appFilter": "all",
+                        "list-customFooter": "",
+                        "cacheAllLinks": "",
+                        "assignment-customHeader": "",
+                        "keyName": "",
+                        "assignment-customFooter": "",
+                        "label": "Inbox",
+                        "enableOffline": "",
+                        "customId": "inbox",
+                        "showDetail": "",
+                        "datalistId": "list_userLogin",
                         "userviewCacheDuration": "20",
+                        "cacheListAction": "",
                         "userviewCacheScope": "",
-                        "showPopup": "false",
-                        "label": "List Inbox",
-                        "rowCount": "false",
+                        "showPopup": "true",
+                        "rowCount": "",
                         "id": "659CAAB7343A467137BFC1CC0C448805",
-                        "showDetail": "false"
+                        "list-customHeader": ""
                     }
                 },
                 {
