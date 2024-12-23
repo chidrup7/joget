@@ -139,13 +139,13 @@
             "className": "org.joget.marketplace.PaymentProcessorTool",
             "properties": {
                 "redirectUserviewMenu": "v",
-                "totalAmount": "#form.game_payment.total_amount#",
+                "totalAmount": "#form.trailGame_payment.total_amount#",
                 "razorApiKey": "#appVariable.razorpay_api_key#",
                 "formDefId": "gamePaymentList",
                 "redirectUserviewMenuFormID": "payment_confirmation_page",
                 "paymentMethod": "RAZORPAY",
                 "apiSecret": "#appVariable.razorpay_api_secret#",
-                "currency": "#form.game_payment.currency#",
+                "currency": "#form.trailGame_payment.currency#",
                 "productName": "Joget Inc."
             }
         },
