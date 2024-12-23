@@ -72,6 +72,46 @@
                 "id": "category-419700b8-543f-4882-a484-01a736e64d29",
                 "label": "<i class='fa fa-tasks'><\/i>Manage Create New User"
             }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [
+                {
+                    "className": "org.joget.plugin.enterprise.DataListInboxMenu",
+                    "properties": {
+                        "appFilter": "all",
+                        "list-customFooter": "",
+                        "assignment-customHeader": "",
+                        "processId": "approver_process",
+                        "assignment-customFooter": "",
+                        "id": "88c56ba1-427e-480b-9b13-1a60fa858c4d",
+                        "label": "Inbox",
+                        "activityDefId": "",
+                        "rowCount": "true",
+                        "customId": "createNewUser_inbox",
+                        "datalistId": "list_createNewUser",
+                        "list-customHeader": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.RunProcess",
+                    "properties": {
+                        "messageShowAfterComplete": "",
+                        "runProcessDirectly": "Yes",
+                        "showInPopupDialog": "",
+                        "keyName": "",
+                        "id": "6faa8046-ebf6-4385-8fc3-bbf23f1090a9",
+                        "label": "Submit Create New User",
+                        "processDefId": "createNewUser_approver_process",
+                        "redirectUrlAfterComplete": "",
+                        "customId": "createNewUser_submit"
+                    }
+                }
+            ],
+            "properties": {
+                "id": "category-811e95a7-bd51-4f0c-aa85-dbc984d25c62",
+                "label": "<i class='fa fa-users'><\/i> Create New User Approval Process"
+            }
         }
     ],
     "properties": {
