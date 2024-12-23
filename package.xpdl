@@ -19,9 +19,7 @@
     </Applications>
     <WorkflowProcesses>
         <WorkflowProcess Id="createNewUser_approver_process" Name="Create New User Approval Process">
-            <ProcessHeader DurationUnit="h">
-                <Created>2024-12-23 16:27:55</Created>
-            </ProcessHeader>
+            <ProcessHeader DurationUnit="h"/>
             <DataFields>
                 <DataField Id="status" IsArray="FALSE">
                     <DataType>
@@ -38,7 +36,6 @@
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
                         <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="325,38"/>
-                        <ExtendedAttribute Name="VariableToProcess_UPDATE" Value="status"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="email_on_received" Name="Email on Received">
@@ -64,11 +61,11 @@
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_approver"/>
                         <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="145,46"/>
-                        <ExtendedAttribute Name="VariableToProcess_UPDATE" Value="status"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="route1" Name="Route 1">
                     <Route/>
+                    <Performer>createNewUser_approver</Performer>
                     <TransitionRestrictions>
                         <TransitionRestriction>
                             <Split Type="XOR">
@@ -113,7 +110,26 @@
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_approver"/>
                         <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="891,119"/>
-                        <ExtendedAttribute Name="VariableToProcess_UPDATE" Value="status"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="create_user_record" Name="Create User Record">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>createNewUser_applicant</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="637,19"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="create_userrole_record" Name="Create UserRole Record">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>createNewUser_applicant</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="833,15"/>
                     </ExtendedAttributes>
                 </Activity>
             </Activities>
@@ -144,7 +160,7 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
-                <Transition From="route1" Id="transition6" To="email_on_approved">
+                <Transition From="route1" Id="transition6" To="create_user_record">
                     <Condition Type="CONDITION">status == "Approved"</Condition>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
@@ -152,6 +168,16 @@
                 </Transition>
                 <Transition From="route1" Id="transition7" To="email_on_rejected">
                     <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="create_user_record" Id="transition10" To="create_userrole_record">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="create_userrole_record" Id="transition11" To="email_on_approved">
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
