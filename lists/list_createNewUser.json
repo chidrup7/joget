@@ -1,0 +1,46 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "username",
+            "id": "column_0",
+            "label": "Username"
+        },
+        {
+            "name": "firstName",
+            "id": "column_1",
+            "label": "First name"
+        },
+        {
+            "name": "lastName",
+            "id": "column_2",
+            "label": "Last name"
+        },
+        {
+            "name": "email",
+            "id": "column_3",
+            "label": "Email"
+        },
+        {
+            "name": "password",
+            "id": "column_4",
+            "label": "Password"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List - Create New User",
+    "id": "list_createNewUser",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "createNewUser"}
+    },
+    "actions": [],
+    "order": ""
+}
