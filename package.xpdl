@@ -335,9 +335,7 @@
             </ExtendedAttributes>
         </WorkflowProcess>
         <WorkflowProcess Id="gameRegistration_approver_process" Name="Game Registration Approval Process">
-            <ProcessHeader DurationUnit="h">
-                <Created>2024-12-23 19:42:39</Created>
-            </ProcessHeader>
+            <ProcessHeader DurationUnit="h"/>
             <DataFields>
                 <DataField Id="status" IsArray="FALSE">
                     <DataType>
@@ -354,10 +352,9 @@
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_applicant"/>
                         <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="325,38"/>
-                        <ExtendedAttribute Name="VariableToProcess_UPDATE" Value="status"/>
                     </ExtendedAttributes>
                 </Activity>
-                <Activity Id="email_on_received" Name="Email on Received">
+                <Activity Id="raise_request" Name="Raise Request">
                     <Implementation>
                         <Tool Id="default_application"/>
                     </Implementation>
@@ -367,7 +364,7 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="144,40"/>
                     </ExtendedAttributes>
                 </Activity>
-                <Activity Id="approval" Name="Approval">
+                <Activity Id="approval_request" Name="Approval Request">
                     <Implementation>
                         <No/>
                     </Implementation>
@@ -380,11 +377,11 @@
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_approver"/>
                         <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="145,46"/>
-                        <ExtendedAttribute Name="VariableToProcess_UPDATE" Value="status"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="route1" Name="Route 1">
                     <Route/>
+                    <Performer>gameRegistration_approver</Performer>
                     <TransitionRestrictions>
                         <TransitionRestriction>
                             <Split Type="XOR">
@@ -398,7 +395,7 @@
                     </TransitionRestrictions>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="642,50"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="599,46"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="update_status" Name="Update Record Status">
@@ -418,7 +415,7 @@
                     <Performer>gameRegistration_approver</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="891,6"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="811,13"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="email_on_rejected" Name="Email on Rejected">
@@ -428,18 +425,17 @@
                     <Performer>gameRegistration_approver</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="891,119"/>
-                        <ExtendedAttribute Name="VariableToProcess_UPDATE" Value="status"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="804,124"/>
                     </ExtendedAttributes>
                 </Activity>
             </Activities>
             <Transitions>
-                <Transition From="email_on_received" Id="transition1" To="approval">
+                <Transition From="raise_request" Id="transition1" To="approval_request">
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
-                <Transition From="approval" Id="transition2" To="update_status">
+                <Transition From="approval_request" Id="transition2" To="update_status">
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
@@ -450,7 +446,7 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
-                <Transition From="clarification" Id="transition4" To="approval">
+                <Transition From="clarification" Id="transition4" To="approval_request">
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
@@ -475,9 +471,9 @@
             </Transitions>
             <ExtendedAttributes>
                 <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="gameRegistration_applicant;gameRegistration_approver"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_applicant,CONNECTING_ACTIVITY_ID=email_on_received,X_OFFSET=55,Y_OFFSET=51,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_approver,CONNECTING_ACTIVITY_ID=email_on_approved,X_OFFSET=1101,Y_OFFSET=19,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_approver,CONNECTING_ACTIVITY_ID=email_on_rejected,X_OFFSET=1101,Y_OFFSET=132,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_applicant,CONNECTING_ACTIVITY_ID=raise_request,X_OFFSET=55,Y_OFFSET=51,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_approver,CONNECTING_ACTIVITY_ID=email_on_approved,X_OFFSET=1015,Y_OFFSET=33,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_approver,CONNECTING_ACTIVITY_ID=email_on_rejected,X_OFFSET=1021,Y_OFFSET=138,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
             </ExtendedAttributes>
         </WorkflowProcess>
     </WorkflowProcesses>

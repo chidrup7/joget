@@ -42,17 +42,6 @@
                </packageActivityForm>
             </entry>
             <entry>
-               <string>gameRegistration_approver_process::approval</string>
-               <packageActivityForm>
-                  <processDefId>gameRegistration_approver_process</processDefId>
-                  <activityDefId>approval</activityDefId>
-                  <formId>gameRegistration_approval</formId>
-                  <type>SINGLE</type>
-                  <autoContinue>false</autoContinue>
-                  <disableSaveAsDraft>false</disableSaveAsDraft>
-               </packageActivityForm>
-            </entry>
-            <entry>
                <string>gameRegistration_approver_process::runProcess</string>
                <packageActivityForm>
                   <processDefId>gameRegistration_approver_process</processDefId>
@@ -96,6 +85,28 @@
                   <disableSaveAsDraft>false</disableSaveAsDraft>
                </packageActivityForm>
             </entry>
+            <entry>
+               <string>gameRegistration_approver_process::approval_request</string>
+               <packageActivityForm>
+                  <processDefId>gameRegistration_approver_process</processDefId>
+                  <activityDefId>approval_request</activityDefId>
+                  <formId>gameRegistration_approval</formId>
+                  <type>SINGLE</type>
+                  <autoContinue>false</autoContinue>
+                  <disableSaveAsDraft>false</disableSaveAsDraft>
+               </packageActivityForm>
+            </entry>
+            <entry>
+               <string>gameRegistration_approver_process::activity3</string>
+               <packageActivityForm>
+                  <processDefId>gameRegistration_approver_process</processDefId>
+                  <activityDefId>activity3</activityDefId>
+                  <formId></formId>
+                  <type>SINGLE</type>
+                  <autoContinue>false</autoContinue>
+                  <disableSaveAsDraft>false</disableSaveAsDraft>
+               </packageActivityForm>
+            </entry>
          </packageActivityFormMap>
          <packageActivityPluginMap>
             <entry>
@@ -123,15 +134,6 @@
                   <activityDefId>email_on_approved</activityDefId>
                   <pluginName>org.joget.apps.app.lib.EmailTool</pluginName>
                   <pluginProperties>{     &quot;host&quot;: &quot;&quot;,     &quot;port&quot;: &quot;&quot;,     &quot;security&quot;: &quot;&quot;,     &quot;username&quot;: &quot;&quot;,     &quot;password&quot;: &quot;&quot;,     &quot;from&quot;: &quot;&quot;,     &quot;toSpecific&quot;: &quot;&quot;,     &quot;toParticipantId&quot;: &quot;gameRegistration_applicant&quot;,     &quot;cc&quot;: &quot;&quot;,     &quot;subject&quot;: &quot;Your Application Has Been Approved&quot;,     &quot;message&quot;: &quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been approved on #date.dd\/MM\/yyyy hh:mm a#.\n\n==  This is a system generated message. == &quot;,     &quot;isHtml&quot;: &quot;true&quot;,     &quot;formDefId&quot;: &quot;&quot;,     &quot;fields&quot;: [],     &quot;files&quot;: [] }</pluginProperties>
-               </packageActivityPlugin>
-            </entry>
-            <entry>
-               <string>gameRegistration_approver_process::email_on_received</string>
-               <packageActivityPlugin>
-                  <processDefId>gameRegistration_approver_process</processDefId>
-                  <activityDefId>email_on_received</activityDefId>
-                  <pluginName>org.joget.apps.app.lib.EmailTool</pluginName>
-                  <pluginProperties>{     &quot;host&quot;: &quot;&quot;,     &quot;port&quot;: &quot;&quot;,     &quot;security&quot;: &quot;&quot;,     &quot;username&quot;: &quot;&quot;,     &quot;password&quot;: &quot;&quot;,     &quot;from&quot;: &quot;&quot;,     &quot;toSpecific&quot;: &quot;&quot;,     &quot;toParticipantId&quot;: &quot;gameRegistration_applicant&quot;,     &quot;cc&quot;: &quot;&quot;,     &quot;subject&quot;: &quot;Your Application Has Been Received&quot;,     &quot;message&quot;: &quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been received on #date.dd\/MM\/yyyy hh:mm a#.\n\n==  This is a system generated message. == &quot;,     &quot;isHtml&quot;: &quot;true&quot;,     &quot;formDefId&quot;: &quot;&quot;,     &quot;fields&quot;: [],     &quot;files&quot;: [] }</pluginProperties>
                </packageActivityPlugin>
             </entry>
             <entry>
@@ -213,6 +215,15 @@
                   <activityDefId>email_on_approved</activityDefId>
                   <pluginName>org.joget.apps.app.lib.EmailTool</pluginName>
                   <pluginProperties>{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trailGame_signup.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Your Application Has Been Approved&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;createNewUser_applicant&quot;,&quot;message&quot;:&quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been approved on #date.dd/MM/yyyy hh:mm a#.\n\n==  This is a system generated message. ==&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%N3oe8CkK40oCyigMcrYE0Qr3Wtn+0Wy9%%%%&quot;,&quot;storepass&quot;:&quot;%%%%X3wjdSCd3B4TnYWOR0F+9g==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;files&quot;:[],&quot;alias&quot;:&quot;&quot;,&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
+               <string>gameRegistration_approver_process::raise_request</string>
+               <packageActivityPlugin>
+                  <processDefId>gameRegistration_approver_process</processDefId>
+                  <activityDefId>raise_request</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{&quot;runInMultiThread&quot;:&quot;&quot;,&quot;comment&quot;:&quot;&quot;,&quot;tools&quot;:[{&quot;className&quot;:&quot;org.joget.apps.app.lib.EmailTool&quot;,&quot;properties&quot;:{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Your Application Has Been Received&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;gameRegistration_applicant&quot;,&quot;message&quot;:&quot;Hi #performer.runProcess.firstName# #performer.runProcess.lastName#,\n\nYour application has been received on #date.dd/MM/yyyy hh:mm a#.\n\n==  This is a system generated message. ==&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;&quot;,&quot;password&quot;:&quot;%%%%YprkECEDbbuSoylgMueE3A==%%%%&quot;,&quot;storepass&quot;:&quot;%%%%YprkECEDbbuSoylgMueE3A==%%%%&quot;,&quot;port&quot;:&quot;&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;host&quot;:&quot;&quot;,&quot;alias&quot;:&quot;&quot;,&quot;files&quot;:[],&quot;from&quot;:&quot;&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;&quot;}}]}</pluginProperties>
                </packageActivityPlugin>
             </entry>
             <entry>
