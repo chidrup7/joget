@@ -35,7 +35,7 @@
                         "autoPopulate": "",
                         "label": "",
                         "id": "generate_otp",
-                        "value": "<script>\n    function generateOTP(){\n        import org.joget.workflow.model.service.*;\n\n// // Generate OTP\nvar otp = Math.round(1000 + Math.random() * 9000);\n\nvar otpStr = otp.toString();\n\nWorkflowManager wm = (WorkflowManager) pluginManager.getBean(\"workflowManager\");\nwm.activityVariable(workflowAssignment.getActivityId(),\"status\", \"Approved\");\n\nwm.activityVariable(workflowAssignment.getActivityId(),\"otp\", otpStr);\n    }\n<\/script>\n\n<button class=\"button\" onClick=\"generateOTP()\">Generate OTP<\/button>"
+                        "value": "<script>\n    function generateOTP(){\n        import org.joget.workflow.model.service.*;\n\n// // Generate OTP\nvar otp = Math.round(1000 + Math.random() * 9000);\n\nvar otpStr = otp.toString();\n\nWorkflowManager wm = (WorkflowManager) pluginManager.getBean(\"workflowManager\");\nwm.activityVariable(workflowAssignment.getActivityId(),\"status\", \"Approved\");\n\nwm.activityVariable(workflowAssignment.getActivityId(),\"otp\", otpStr);\n    }\n<\/script>\n\n<button class=\"button\" onClick=\"generateOTP()\">Generate OTP<\/button>\n\n"
                     }
                 },
                 {
@@ -58,6 +58,16 @@
                         "value": "",
                         "readonlyLabel": "",
                         "storeNumeric": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.CustomHTML",
+                    "properties": {
+                        "requiredSanitize": "",
+                        "autoPopulate": "",
+                        "label": "",
+                        "id": "otp_validation",
+                        "value": "<button class=\"button\" onClick=\"otpVerification()\">Verify<\/button>"
                     }
                 }
             ],
