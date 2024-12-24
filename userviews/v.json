@@ -731,7 +731,7 @@
             "properties": {
                 "hide": "",
                 "permission": {
-                    "className": "",
+                    "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
                     "properties": {}
                 },
                 "comment": "",
