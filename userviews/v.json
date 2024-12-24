@@ -22,27 +22,92 @@
         },
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
-            "menus": [{
-                "className": "org.joget.apps.userview.lib.DataListMenu",
-                "properties": {
-                    "cacheAllLinks": "",
-                    "customHeader": "",
-                    "keyName": "",
-                    "customFooter": "",
-                    "label": "Booking Summary Report",
-                    "enableOffline": "",
-                    "customId": "booking_summary_report",
-                    "buttonPosition": "bothLeft",
-                    "datalistId": "bookingSummaryReport",
-                    "checkboxPosition": "left",
-                    "selectionType": "multiple",
-                    "userviewCacheDuration": "20",
-                    "cacheListAction": "",
-                    "userviewCacheScope": "",
-                    "rowCount": "",
-                    "id": "39F1BA0CBFDB4C0B8962663BA4277EEC"
+            "menus": [
+                {
+                    "className": "org.joget.plugin.enterprise.SqlChartMenu",
+                    "properties": {
+                        "stack": "",
+                        "xAxisDisplayAS": "",
+                        "showLegend": "true",
+                        "customFooter": "",
+                        "enableOffline": "",
+                        "title": "Chart Title",
+                        "customId": "game_booking_report",
+                        "chartHeight": "80%",
+                        "mapping_x": "trailGame_details.game",
+                        "yaxisPrefix": "",
+                        "categoryAxisLabel": "Category",
+                        "horizontal": "",
+                        "library": "echart",
+                        "theme": "",
+                        "showValueLabel": "true",
+                        "id": "E63A74B40F5E406AEA43AD6B957C95EE",
+                        "series_customization": [],
+                        "binder": {
+                            "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+                            "properties": {
+                                "joins": [{
+                                    "joinFieldId": "game_list",
+                                    "tableName": "trailGame_details",
+                                    "fieldId": "trailGame_details.id"
+                                }],
+                                "having": [],
+                                "aggregateField": [{
+                                    "field": "trailGame_details.game",
+                                    "function": "AFD_COUNT_"
+                                }],
+                                "formDefId": "gameRegistration",
+                                "customSelectionValue": "",
+                                "extraCondition": "",
+                                "filters": [],
+                                "groupBy": "trailGame_details.game",
+                                "functionColumns": []
+                            }
+                        },
+                        "sortingOrder": "ASC",
+                        "customHeader": "",
+                        "valueAxisLabel": "Value",
+                        "sortingOrderByColumn": "",
+                        "keyName": "",
+                        "label": "Game Booking Report",
+                        "chartWidth": "100%",
+                        "userviewCacheDuration": "20",
+                        "xAxisBoundaryGap": "",
+                        "userviewCacheScope": "",
+                        "datasource": "binder",
+                        "mapping_ys": [{
+                            "customization": "",
+                            "legend": "Number",
+                            "y": "AFD_COUNT_trailGame_details.game"
+                        }],
+                        "chartType": "bar",
+                        "showTable": "",
+                        "optionCustomization": "",
+                        "chartUseAllDataRows": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.DataListMenu",
+                    "properties": {
+                        "cacheAllLinks": "",
+                        "customHeader": "",
+                        "keyName": "",
+                        "customFooter": "",
+                        "label": "Booking Summary Report",
+                        "enableOffline": "",
+                        "customId": "booking_summary_report",
+                        "buttonPosition": "bothLeft",
+                        "datalistId": "bookingSummaryReport",
+                        "checkboxPosition": "left",
+                        "selectionType": "multiple",
+                        "userviewCacheDuration": "20",
+                        "cacheListAction": "",
+                        "userviewCacheScope": "",
+                        "rowCount": "",
+                        "id": "39F1BA0CBFDB4C0B8962663BA4277EEC"
+                    }
                 }
-            }],
+            ],
             "properties": {
                 "hide": "",
                 "permission": {
