@@ -464,7 +464,7 @@
             "properties": {
                 "hide": "",
                 "permission": {
-                    "className": "org.joget.plugin.enterprise.AnonymousUserviewPermission",
+                    "className": "org.joget.apps.userview.lib.LoggedInUserPermission",
                     "properties": {}
                 },
                 "comment": "",
