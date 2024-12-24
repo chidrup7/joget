@@ -99,21 +99,35 @@
                 {
                     "className": "org.joget.apps.userview.lib.RunProcess",
                     "properties": {
-                        "messageShowAfterComplete": "",
                         "runProcessDirectly": "Yes",
-                        "showInPopupDialog": "",
+                        "fieldPassoverMethod": "append",
                         "keyName": "",
+                        "label": "Sign In",
+                        "redirectTarget": "",
+                        "enableOffline": "",
+                        "customId": "sign_in",
+                        "messageShowAfterComplete": "",
+                        "userviewCacheDuration": "",
+                        "showInPopupDialog": "",
+                        "userviewCacheScope": "",
+                        "actionAfterSaved": "",
+                        "runProcessSubmitLabel": "",
                         "id": "6faa8046-ebf6-4385-8fc3-bbf23f1090a9",
-                        "label": "Submit Create New User",
                         "processDefId": "createNewUser_approver_process",
                         "redirectUrlAfterComplete": "",
-                        "customId": "createNewUser_submit"
+                        "fieldPassover": ""
                     }
                 }
             ],
             "properties": {
+                "hide": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
                 "id": "category-811e95a7-bd51-4f0c-aa85-dbc984d25c62",
-                "label": "<i class='fa fa-users'><\/i> Create New User Approval Process"
+                "label": "<i class=\"fa fa-users\"><\/i> Sign In"
             }
         },
         {
@@ -436,21 +450,35 @@
                 {
                     "className": "org.joget.apps.userview.lib.RunProcess",
                     "properties": {
-                        "messageShowAfterComplete": "",
                         "runProcessDirectly": "Yes",
-                        "showInPopupDialog": "",
+                        "fieldPassoverMethod": "append",
                         "keyName": "",
+                        "label": "Game Registration",
+                        "redirectTarget": "",
+                        "enableOffline": "",
+                        "customId": "game_registration",
+                        "messageShowAfterComplete": "",
+                        "userviewCacheDuration": "",
+                        "showInPopupDialog": "",
+                        "userviewCacheScope": "",
+                        "actionAfterSaved": "",
+                        "runProcessSubmitLabel": "",
                         "id": "9bb20f72-00cc-433b-be99-ca2ebe14abd4",
-                        "label": "Submit Game Registration",
                         "processDefId": "gameRegistration_approver_process",
                         "redirectUrlAfterComplete": "",
-                        "customId": "gameRegistration_submit"
+                        "fieldPassover": ""
                     }
                 }
             ],
             "properties": {
+                "hide": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
                 "id": "category-c1a7343c-5548-432c-bb05-e233ef7b600b",
-                "label": "<i class='fa fa-users'><\/i> Game Registration Approval Process"
+                "label": "<i class=\"fa fa-users\"><\/i> Game Registration"
             }
         },
         {
