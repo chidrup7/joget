@@ -13,7 +13,7 @@
          <id>counter</id>
          <appId>trailGameApp</appId>
          <appVersion>1</appVersion>
-         <value>6</value>
+         <value>7</value>
          <remarks>Used for plugin: Id Generator Field</remarks>
       </environmentVariable>
       <environmentVariable>
@@ -29,6 +29,13 @@
          <appVersion>1</appVersion>
          <value>087xZpXvdI6CoHz5igQcc2Jw</value>
          <remarks></remarks>
+      </environmentVariable>
+      <environmentVariable>
+         <id>SignupNo</id>
+         <appId>trailGameApp</appId>
+         <appVersion>1</appVersion>
+         <value>1</value>
+         <remarks>Used for plugin: Id Generator Field</remarks>
       </environmentVariable>
    </environmentVariableList>
    <messageList/>

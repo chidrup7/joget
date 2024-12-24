@@ -105,10 +105,10 @@
                     <Implementation>
                         <Tool Id="default_application"/>
                     </Implementation>
-                    <Performer>createNewUser_approver</Performer>
+                    <Performer>createNewUser_applicant</Performer>
                     <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="891,6"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="986,32"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="email_on_rejected" Name="Email on Rejected">
@@ -195,7 +195,7 @@
             <ExtendedAttributes>
                 <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="createNewUser_applicant;createNewUser_approver"/>
                 <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_applicant,CONNECTING_ACTIVITY_ID=email_on_received,X_OFFSET=55,Y_OFFSET=51,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_approver,CONNECTING_ACTIVITY_ID=email_on_approved,X_OFFSET=1101,Y_OFFSET=19,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_applicant,CONNECTING_ACTIVITY_ID=email_on_approved,X_OFFSET=1084,Y_OFFSET=124,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
                 <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_approver,CONNECTING_ACTIVITY_ID=email_on_rejected,X_OFFSET=1101,Y_OFFSET=132,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
             </ExtendedAttributes>
         </WorkflowProcess>
