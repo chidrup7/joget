@@ -7,9 +7,9 @@
                 "attr-data-events-listening": [],
                 "attr-target": "_blank",
                 "css-display-type": "btn btn-primary",
-                "textContent": "pay",
+                "textContent": "<p>pay<\/p>",
                 "id": "75AB4B2ACD2A4ABE5F37137A0B96D506",
-                "attr-href": "#form.trailGame_pymtList.razorpay_payment_link#",
+                "attr-href": "http://localhost:8080/jw/web/json/app/trailGameApp/1/plugin/org.joget.marketplace.PaymentProcessorTool/service?action=generateLink&provider=razorpay&id=89535ab7-fd6d-4568-85fd-997c69a12abb&formDefId=gamePaymentList",
                 "customId": ""
             }
         }
