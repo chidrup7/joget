@@ -109,7 +109,7 @@
                 }
             ],
             "properties": {
-                "hide": "",
+                "hide": "yes",
                 "permission": {
                     "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
                     "properties": {}
@@ -171,7 +171,7 @@
                 }
             }],
             "properties": {
-                "hide": "",
+                "hide": "yes",
                 "permission": {
                     "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
                     "properties": {}
@@ -233,7 +233,7 @@
                 }
             }],
             "properties": {
-                "hide": "",
+                "hide": "yes",
                 "permission": {
                     "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
                     "properties": {}
@@ -357,7 +357,7 @@
                 }
             }],
             "properties": {
-                "hide": "",
+                "hide": "yes",
                 "permission": {
                     "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
                     "properties": {}
@@ -411,7 +411,7 @@
                 }
             ],
             "properties": {
-                "hide": "",
+                "hide": "yes",
                 "permission": {
                     "className": "",
                     "properties": {}
@@ -472,7 +472,7 @@
                 }
             ],
             "properties": {
-                "hide": "",
+                "hide": "yes",
                 "permission": {
                     "className": "",
                     "properties": {}
@@ -596,7 +596,7 @@
                 }
             }],
             "properties": {
-                "hide": "",
+                "hide": "yes",
                 "permission": {
                     "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
                     "properties": {}
@@ -650,7 +650,7 @@
                 }
             ],
             "properties": {
-                "hide": "",
+                "hide": "yes",
                 "permission": {
                     "className": "",
                     "properties": {}
