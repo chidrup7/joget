@@ -265,15 +265,6 @@
          </packageActivityPluginMap>
          <packageParticipantMap>
             <entry>
-               <string>createNewUser_approver_process::processStartWhiteList</string>
-               <packageParticipant>
-                  <processDefId>createNewUser_approver_process</processDefId>
-                  <participantId>processStartWhiteList</participantId>
-                  <type>role</type>
-                  <value>loggedInUser</value>
-               </packageParticipant>
-            </entry>
-            <entry>
                <string>gameRegistration_approver_process::gameRegistration_applicant</string>
                <packageParticipant>
                   <processDefId>gameRegistration_approver_process</processDefId>
