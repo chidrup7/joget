@@ -23,6 +23,40 @@
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
             "menus": [{
+                "className": "org.joget.apps.userview.lib.DataListMenu",
+                "properties": {
+                    "cacheAllLinks": "",
+                    "customHeader": "",
+                    "keyName": "",
+                    "customFooter": "",
+                    "label": "Booking Summary Report",
+                    "enableOffline": "",
+                    "customId": "booking_summary_report",
+                    "buttonPosition": "bothLeft",
+                    "datalistId": "bookingSummaryReport",
+                    "checkboxPosition": "left",
+                    "selectionType": "multiple",
+                    "userviewCacheDuration": "20",
+                    "cacheListAction": "",
+                    "userviewCacheScope": "",
+                    "rowCount": "",
+                    "id": "39F1BA0CBFDB4C0B8962663BA4277EEC"
+                }
+            }],
+            "properties": {
+                "hide": "",
+                "permission": {
+                    "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
+                    "properties": {}
+                },
+                "comment": "",
+                "label": "Report",
+                "id": "category-873612C2B800435DC101F2A214CD416A"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
                 "className": "org.joget.plugin.enterprise.CrudMenu",
                 "properties": {
                     "list-customFooter": "",
