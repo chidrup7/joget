@@ -369,47 +369,28 @@
         },
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
-            "menus": [
-                {
-                    "className": "org.joget.plugin.enterprise.DataListInboxMenu",
-                    "properties": {
-                        "appFilter": "all",
-                        "list-customFooter": "",
-                        "assignment-customHeader": "",
-                        "processId": "approver_process",
-                        "assignment-customFooter": "",
-                        "id": "88c56ba1-427e-480b-9b13-1a60fa858c4d",
-                        "label": "Inbox",
-                        "activityDefId": "",
-                        "rowCount": "true",
-                        "customId": "createNewUser_inbox",
-                        "datalistId": "list_createNewUser",
-                        "list-customHeader": ""
-                    }
-                },
-                {
-                    "className": "org.joget.apps.userview.lib.RunProcess",
-                    "properties": {
-                        "runProcessDirectly": "Yes",
-                        "fieldPassoverMethod": "append",
-                        "keyName": "",
-                        "label": "Sign UP",
-                        "redirectTarget": "",
-                        "enableOffline": "",
-                        "customId": "sign_up",
-                        "messageShowAfterComplete": "",
-                        "userviewCacheDuration": "",
-                        "showInPopupDialog": "",
-                        "userviewCacheScope": "",
-                        "actionAfterSaved": "",
-                        "runProcessSubmitLabel": "",
-                        "id": "6faa8046-ebf6-4385-8fc3-bbf23f1090a9",
-                        "processDefId": "createNewUser_approver_process",
-                        "redirectUrlAfterComplete": "",
-                        "fieldPassover": ""
-                    }
+            "menus": [{
+                "className": "org.joget.apps.userview.lib.RunProcess",
+                "properties": {
+                    "runProcessDirectly": "Yes",
+                    "fieldPassoverMethod": "append",
+                    "keyName": "",
+                    "label": "Sign UP",
+                    "redirectTarget": "",
+                    "enableOffline": "",
+                    "customId": "sign_up",
+                    "messageShowAfterComplete": "",
+                    "userviewCacheDuration": "",
+                    "showInPopupDialog": "",
+                    "userviewCacheScope": "",
+                    "actionAfterSaved": "",
+                    "runProcessSubmitLabel": "",
+                    "id": "6faa8046-ebf6-4385-8fc3-bbf23f1090a9",
+                    "processDefId": "createNewUser_approver_process",
+                    "redirectUrlAfterComplete": "",
+                    "fieldPassover": ""
                 }
-            ],
+            }],
             "properties": {
                 "hide": "",
                 "permission": {
@@ -423,54 +404,29 @@
         },
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
-            "menus": [
-                {
-                    "className": "org.joget.apps.userview.lib.RunProcess",
-                    "properties": {
-                        "runProcessDirectly": "Yes",
-                        "fieldPassoverMethod": "append",
-                        "keyName": "",
-                        "label": "Login",
-                        "redirectTarget": "",
-                        "enableOffline": "",
-                        "afterSavedReloadTarget": "true",
-                        "customId": "login",
-                        "userviewCacheDuration": "20",
-                        "messageShowAfterComplete": "",
-                        "showInPopupDialog": "Yes",
-                        "userviewCacheScope": "",
-                        "actionAfterSaved": "",
-                        "runProcessSubmitLabel": "",
-                        "id": "67BB3E184FC04F760872D18CF241551C",
-                        "processDefId": "login_user",
-                        "redirectUrlAfterComplete": "/jw/web/userview/trailGameApp/v/_/inbox",
-                        "fieldPassover": ""
-                    }
-                },
-                {
-                    "className": "org.joget.plugin.enterprise.DataListInboxMenu",
-                    "properties": {
-                        "appFilter": "all",
-                        "list-customFooter": "",
-                        "cacheAllLinks": "",
-                        "assignment-customHeader": "",
-                        "keyName": "",
-                        "assignment-customFooter": "",
-                        "label": "Inbox",
-                        "enableOffline": "",
-                        "customId": "inbox",
-                        "showDetail": "",
-                        "datalistId": "list_userLogin",
-                        "userviewCacheDuration": "20",
-                        "cacheListAction": "",
-                        "userviewCacheScope": "",
-                        "showPopup": "true",
-                        "rowCount": "",
-                        "id": "659CAAB7343A467137BFC1CC0C448805",
-                        "list-customHeader": ""
-                    }
+            "menus": [{
+                "className": "org.joget.apps.userview.lib.RunProcess",
+                "properties": {
+                    "runProcessDirectly": "Yes",
+                    "fieldPassoverMethod": "append",
+                    "keyName": "",
+                    "label": "Login",
+                    "redirectTarget": "",
+                    "enableOffline": "",
+                    "afterSavedReloadTarget": "true",
+                    "customId": "login",
+                    "userviewCacheDuration": "20",
+                    "messageShowAfterComplete": "",
+                    "showInPopupDialog": "Yes",
+                    "userviewCacheScope": "",
+                    "actionAfterSaved": "",
+                    "runProcessSubmitLabel": "",
+                    "id": "67BB3E184FC04F760872D18CF241551C",
+                    "processDefId": "login_user",
+                    "redirectUrlAfterComplete": "/jw/web/userview/trailGameApp/v/_/inbox",
+                    "fieldPassover": ""
                 }
-            ],
+            }],
             "properties": {
                 "hide": "",
                 "permission": {
@@ -682,7 +638,7 @@
                 }
             ],
             "properties": {
-                "hide": "",
+                "hide": "yes",
                 "permission": {
                     "className": "",
                     "properties": {}
