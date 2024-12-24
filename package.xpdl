@@ -476,6 +476,16 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="944,170"/>
                     </ExtendedAttributes>
                 </Activity>
+                <Activity Id="payment_link_email" Name="Payment link Email">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>gameRegistration_applicant</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_applicant"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="750,10"/>
+                    </ExtendedAttributes>
+                </Activity>
             </Activities>
             <Transitions>
                 <Transition From="raise_request" Id="transition1" To="approval_request">
@@ -527,13 +537,18 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
-                <Transition From="payment" Id="transition12" To="route2">
+                <Transition From="payment" Id="transition12" To="payment_link_email">
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
                 <Transition From="route2" Id="transition13" To="payment_failed">
                     <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="payment_link_email" Id="transition15" To="route2">
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
