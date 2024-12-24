@@ -771,7 +771,7 @@
         "id": "v"
     },
     "setting": {"properties": {
-        "tempDisablePermissionChecking": "",
+        "tempDisablePermissionChecking": "true",
         "userviewDescription": "",
         "userviewId": "v",
         "hideThisUserviewInAppCenter": "",
