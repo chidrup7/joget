@@ -771,7 +771,7 @@
         "id": "v"
     },
     "setting": {"properties": {
-        "tempDisablePermissionChecking": "true",
+        "tempDisablePermissionChecking": "",
         "userviewDescription": "",
         "userviewId": "v",
         "hideThisUserviewInAppCenter": "",
@@ -839,7 +839,7 @@
             }
         },
         "permission": {
-            "className": "org.joget.plugin.enterprise.AnonymousUserviewPermission",
+            "className": "org.joget.apps.userview.lib.LoggedInUserPermission",
             "properties": {}
         },
         "userviewName": "Trail Game Application"
