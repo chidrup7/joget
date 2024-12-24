@@ -314,8 +314,8 @@
                <packageParticipant>
                   <processDefId>gameRegistration_approver_process</processDefId>
                   <participantId>gameRegistration_approver</participantId>
-                  <type>requesterHod</type>
-                  <value>runProcess</value>
+                  <type>user</type>
+                  <value>admin</value>
                </packageParticipant>
             </entry>
             <entry>
