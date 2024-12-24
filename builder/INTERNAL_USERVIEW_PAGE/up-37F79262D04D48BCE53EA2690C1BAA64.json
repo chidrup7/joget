@@ -1,0 +1,18 @@
+{
+    "elements": [
+        {
+            "className": "org.joget.apps.userview.lib.component.ButtonComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "css-display-type": "btn btn-primary",
+                "attr-onclick": "<script>\n     function generateOTP(){\n         import org.joget.workflow.model.service.*;\n\n //Generate OTP\n var otp = Math.round(1000 + Math.random() * 9000);\n\n var otpStr = otp.toString();\n\n WorkflowManager wm = (WorkflowManager) pluginManager.getBean(\"workflowManager\");\n wm.activityVariable(workflowAssignment.getActivityId(),\"status\", \"Approved\");\n\n wm.activityVariable(workflowAssignment.getActivityId(),\"otp\", otpStr);\n\n window.location.href=\"/jw/web/console/app/trailGameApp/1/userview/builder/v/_/otpValidation\"\n     }\n <\/script>\n\n<button class=\"button\" onClick=\"generateOTP()\" >Verify Email<\/button>",
+                "textContent": "Generate OTP",
+                "id": "DEA6E42830BE44D018ED47074C9B3EA6",
+                "customId": "generate_otp"
+            }
+        },
+        {"className": "menu-component"}
+    ],
+    "className": "org.joget.apps.userview.model.UserviewPage",
+    "properties": {"id": "up-37F79262D04D48BCE53EA2690C1BAA64"}
+}

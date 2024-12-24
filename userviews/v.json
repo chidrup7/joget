@@ -369,29 +369,63 @@
         },
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
-            "menus": [{
-                "className": "org.joget.apps.userview.lib.RunProcess",
-                "properties": {
-                    "runProcessDirectly": "Yes",
-                    "fieldPassoverMethod": "append",
-                    "keyName": "",
-                    "label": "Existing User? Login",
-                    "redirectTarget": "",
-                    "enableOffline": "",
-                    "afterSavedReloadTarget": "true",
-                    "customId": "login",
-                    "userviewCacheDuration": "20",
-                    "messageShowAfterComplete": "",
-                    "showInPopupDialog": "Yes",
-                    "userviewCacheScope": "",
-                    "actionAfterSaved": "",
-                    "runProcessSubmitLabel": "",
-                    "id": "67BB3E184FC04F760872D18CF241551C",
-                    "processDefId": "login_user",
-                    "redirectUrlAfterComplete": "/jw/web/userview/trailGameApp/v/_/inbox",
-                    "fieldPassover": ""
+            "menus": [
+                {
+                    "className": "org.joget.apps.userview.lib.RunProcess",
+                    "properties": {
+                        "runProcessDirectly": "Yes",
+                        "fieldPassoverMethod": "append",
+                        "keyName": "",
+                        "label": "Existing User? Login",
+                        "redirectTarget": "",
+                        "enableOffline": "",
+                        "afterSavedReloadTarget": "true",
+                        "customId": "login",
+                        "userviewCacheDuration": "20",
+                        "messageShowAfterComplete": "",
+                        "showInPopupDialog": "Yes",
+                        "userviewCacheScope": "",
+                        "actionAfterSaved": "",
+                        "runProcessSubmitLabel": "",
+                        "id": "67BB3E184FC04F760872D18CF241551C",
+                        "processDefId": "login_user",
+                        "redirectUrlAfterComplete": "/jw/web/userview/trailGameApp/v/_/inbox",
+                        "fieldPassover": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "actionOnCancel": "",
+                        "redirectTargetOnCancel": "top",
+                        "customFooter": "",
+                        "paramName": "",
+                        "enableOffline": "",
+                        "afterSavedReloadTarget": "true",
+                        "customId": "otp_validation",
+                        "showInPopupDialog": "",
+                        "readonly": "",
+                        "cancelButtonLabel": "",
+                        "actionAfterSaved": "",
+                        "id": "37F79262D04D48BCE53EA2690C1BAA64",
+                        "redirectUrlAfterComplete": "",
+                        "fieldPassover": "",
+                        "formId": "otpValidation",
+                        "customHeader": "",
+                        "fieldPassoverMethod": "append",
+                        "redirectTargetOnComplete": "",
+                        "keyName": "",
+                        "label": "OTP Validation",
+                        "userviewCacheDuration": "20",
+                        "messageShowAfterComplete": "",
+                        "submitButtonLabel": "",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": "true"
+                    }
                 }
-            }],
+            ],
             "properties": {
                 "hide": "",
                 "permission": {
