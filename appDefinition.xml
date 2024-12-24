@@ -116,7 +116,7 @@
                   <processDefId>gameRegistration_approver_process</processDefId>
                   <participantId>gameRegistration_approver</participantId>
                   <type>user</type>
-                  <value>cat</value>
+                  <value>admin</value>
                </packageParticipant>
             </entry>
             <entry>
