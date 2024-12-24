@@ -1,5 +1,19 @@
 {
-    "elements": [{"className": "menu-component"}],
+    "elements": [
+        {
+            "className": "org.joget.apps.userview.lib.component.ButtonComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "attr-target": "_blank",
+                "css-display-type": "btn btn-primary",
+                "textContent": "Login",
+                "id": "964F4D9191D94BBC633405B39F7B7F15",
+                "attr-href": "http://localhost:8080/jw/web/userview/trailGameApp/v/_/login",
+                "customId": ""
+            }
+        },
+        {"className": "menu-component"}
+    ],
     "className": "org.joget.apps.userview.model.UserviewPage",
     "properties": {"id": "up-9d8d6508-2498-46df-bc9c-1eaeae8d3d48"}
 }
