@@ -155,15 +155,23 @@
                 {
                     "className": "org.joget.apps.userview.lib.RunProcess",
                     "properties": {
-                        "messageShowAfterComplete": "",
                         "runProcessDirectly": "Yes",
-                        "showInPopupDialog": "",
+                        "fieldPassoverMethod": "append",
                         "keyName": "",
-                        "id": "7ec7e0c7-7ad9-4d1a-b12d-8e5533523b47",
                         "label": "Submit Game Registration",
+                        "redirectTarget": "top",
+                        "enableOffline": "",
+                        "customId": "gameRegistration_submit",
+                        "messageShowAfterComplete": "",
+                        "userviewCacheDuration": "",
+                        "showInPopupDialog": "",
+                        "userviewCacheScope": "",
+                        "actionAfterSaved": "",
+                        "runProcessSubmitLabel": "",
+                        "id": "7ec7e0c7-7ad9-4d1a-b12d-8e5533523b47",
                         "processDefId": "gameRegistration_approver_process",
                         "redirectUrlAfterComplete": "",
-                        "customId": "gameRegistration_submit"
+                        "fieldPassover": ""
                     }
                 }
             ],
