@@ -393,10 +393,10 @@
                         "runProcessDirectly": "Yes",
                         "fieldPassoverMethod": "append",
                         "keyName": "",
-                        "label": "Sign In",
+                        "label": "Sign UP",
                         "redirectTarget": "",
                         "enableOffline": "",
-                        "customId": "sign_in",
+                        "customId": "sign_up",
                         "messageShowAfterComplete": "",
                         "userviewCacheDuration": "",
                         "showInPopupDialog": "",
@@ -418,7 +418,7 @@
                 },
                 "comment": "",
                 "id": "category-811e95a7-bd51-4f0c-aa85-dbc984d25c62",
-                "label": "<i class=\"fa fa-users\"><\/i> Sign In"
+                "label": "<i class=\"fa fa-users\"><\/i> Sign Up"
             }
         },
         {
