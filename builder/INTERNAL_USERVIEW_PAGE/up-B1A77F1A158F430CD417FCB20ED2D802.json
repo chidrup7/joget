@@ -1,0 +1,19 @@
+{
+    "elements": [
+        {"className": "menu-component"},
+        {
+            "className": "org.joget.apps.userview.lib.component.ButtonComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "attr-target": "_blank",
+                "css-display-type": "btn btn-primary",
+                "textContent": "pay",
+                "id": "75AB4B2ACD2A4ABE5F37137A0B96D506",
+                "attr-href": "#form.trailGame_pymtList.razorpay_payment_link#",
+                "customId": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.userview.model.UserviewPage",
+    "properties": {"id": "up-B1A77F1A158F430CD417FCB20ED2D802"}
+}
