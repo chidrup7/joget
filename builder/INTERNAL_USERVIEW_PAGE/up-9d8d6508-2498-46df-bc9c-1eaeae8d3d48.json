@@ -12,6 +12,18 @@
                 "customId": ""
             }
         },
+        {
+            "className": "org.joget.apps.userview.lib.component.ButtonComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "attr-target": "_blank",
+                "css-display-type": "btn btn-primary",
+                "textContent": "Sign Up",
+                "id": "8AD3267CDDD0462B0446B1504096A782",
+                "attr-href": "http://localhost:8080/jw/web/userview/trailGameApp/v/_/sign_up",
+                "customId": "sign_up"
+            }
+        },
         {"className": "menu-component"}
     ],
     "className": "org.joget.apps.userview.model.UserviewPage",
