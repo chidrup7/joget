@@ -472,7 +472,7 @@
                 }
             ],
             "properties": {
-                "hide": "yes",
+                "hide": "",
                 "permission": {
                     "className": "",
                     "properties": {}
