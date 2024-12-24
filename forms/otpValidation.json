@@ -36,6 +36,16 @@
                         "readonlyLabel": "",
                         "storeNumeric": ""
                     }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.CustomHTML",
+                    "properties": {
+                        "requiredSanitize": "",
+                        "autoPopulate": "",
+                        "label": "",
+                        "id": "field3",
+                        "value": "<script>\n    function otpValidate(){\n        \n        import org.joget.workflow.model.service.*;\n\nvar enteredOtp = getVariable(#form.user_login.enter_otp#); // Get the OTP entered by the user\nvar storedOtp = getVariable(#variable.otpStr); // Get the OTP stored in the process variable\n\nWorkflowManager wm = (WorkflowManager) pluginManager.getBean(\"workflowManager\");\n\nif (enteredOtp === storedOtp) {\n    // OTP is valid, proceed with login\n   wm.activityVariable(workflowAssignment.getActivityId(),\"status\", \"Approved\");\n} else {\n    // OTP is invalid\n    wm.activityVariable(workflowAssignment.getActivityId(),\"status\", \"Rejected\");\n}\n    }\n<\/script>\n\n<button class=\"button\" onclick=\"otpValidate()\">Validate<\/button>"
+                    }
                 }
             ],
             "className": "org.joget.apps.form.model.Column",
