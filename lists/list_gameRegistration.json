@@ -1,4 +1,8 @@
 {
+    "template": {
+        "className": "",
+        "properties": {}
+    },
     "useSession": "false",
     "showPageSizeSelector": "true",
     "rowActions": [],
@@ -17,6 +21,14 @@
             "name": "email",
             "id": "column_2",
             "label": "Email"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "approval_status",
+            "id": "column_5",
+            "label": "approval_status",
+            "sortable": "false"
         },
         {
             "name": "game_list",
