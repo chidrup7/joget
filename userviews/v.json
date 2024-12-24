@@ -464,8 +464,8 @@
             "properties": {
                 "hide": "",
                 "permission": {
-                    "className": "org.joget.apps.userview.lib.BeanShellPermission",
-                    "properties": {"script": "// Get the current user (this checks if the user is logged in)\r\nvar currentUser = getCurrentUser();\r\n\r\n// If the currentUser is null, it means the user is not logged in, allow access\r\nif (currentUser == null) {\r\n    return true; // Allow access if not logged in\r\n} else {\r\n    return false; // Deny access if logged in\r\n}\r\n"}
+                    "className": "org.joget.plugin.enterprise.AnonymousUserviewPermission",
+                    "properties": {}
                 },
                 "comment": "",
                 "id": "category-811e95a7-bd51-4f0c-aa85-dbc984d25c62",
