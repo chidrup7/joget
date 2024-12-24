@@ -1,0 +1,18 @@
+{
+    "elements": [
+        {"className": "menu-component"},
+        {
+            "className": "org.joget.apps.userview.lib.component.ButtonComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "attr-target": "_blank",
+                "css-display-type": "btn btn-primary",
+                "textContent": "Validate Otp",
+                "id": "6FB2889DFD7147A4FBB5432D1C54ABDC",
+                "customId": "validate_otp"
+            }
+        }
+    ],
+    "className": "org.joget.apps.userview.model.UserviewPage",
+    "properties": {"id": "up-67BB3E184FC04F760872D18CF241551C"}
+}
