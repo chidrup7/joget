@@ -1,18 +1,34 @@
 {
-    "rowActions": [],
-    "columns": [],
-    "name": "Game Booking Summary Report",
-    "pageSize": "0",
-    "orderBy": "",
-    "description": "",
-    "id": "bookingSummaryReport",
-    "filters": [],
-    "binder": {
-        "name": "",
+    "template": {
         "className": "",
         "properties": {}
     },
-    "actions": [],
+    "rowActions": [],
+    "columns": [],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
     "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "Game Booking Summary Report",
+    "id": "bookingSummaryReport",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {
+            "joins": [],
+            "having": [],
+            "aggregateField": [{
+                "field": "game_list",
+                "function": "AFD_COUNT_"
+            }],
+            "formDefId": "gameRegistration",
+            "customSelectionValue": "",
+            "extraCondition": "",
+            "filters": [],
+            "groupBy": "game_list",
+            "functionColumns": []
+        }
+    },
+    "actions": [],
     "order": ""
 }
