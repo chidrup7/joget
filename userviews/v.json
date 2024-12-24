@@ -375,41 +375,6 @@
                     "runProcessDirectly": "Yes",
                     "fieldPassoverMethod": "append",
                     "keyName": "",
-                    "label": "Sign UP",
-                    "redirectTarget": "",
-                    "enableOffline": "",
-                    "customId": "sign_up",
-                    "messageShowAfterComplete": "",
-                    "userviewCacheDuration": "",
-                    "showInPopupDialog": "",
-                    "userviewCacheScope": "",
-                    "actionAfterSaved": "",
-                    "runProcessSubmitLabel": "",
-                    "id": "6faa8046-ebf6-4385-8fc3-bbf23f1090a9",
-                    "processDefId": "createNewUser_approver_process",
-                    "redirectUrlAfterComplete": "",
-                    "fieldPassover": ""
-                }
-            }],
-            "properties": {
-                "hide": "",
-                "permission": {
-                    "className": "",
-                    "properties": {}
-                },
-                "comment": "",
-                "id": "category-811e95a7-bd51-4f0c-aa85-dbc984d25c62",
-                "label": "<i class=\"fa fa-users\"><\/i> Sign Up"
-            }
-        },
-        {
-            "className": "org.joget.apps.userview.model.UserviewCategory",
-            "menus": [{
-                "className": "org.joget.apps.userview.lib.RunProcess",
-                "properties": {
-                    "runProcessDirectly": "Yes",
-                    "fieldPassoverMethod": "append",
-                    "keyName": "",
                     "label": "Login",
                     "redirectTarget": "",
                     "enableOffline": "",
@@ -434,8 +399,43 @@
                     "properties": {}
                 },
                 "comment": "",
-                "label": "Login",
+                "label": "Existing user login",
                 "id": "category-F5C135143C3C46DB6D8A6D9ACF3A0150"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.apps.userview.lib.RunProcess",
+                "properties": {
+                    "runProcessDirectly": "Yes",
+                    "fieldPassoverMethod": "append",
+                    "keyName": "",
+                    "label": "Sign UP",
+                    "redirectTarget": "",
+                    "enableOffline": "",
+                    "customId": "sign_up",
+                    "messageShowAfterComplete": "",
+                    "userviewCacheDuration": "",
+                    "showInPopupDialog": "",
+                    "userviewCacheScope": "",
+                    "actionAfterSaved": "",
+                    "runProcessSubmitLabel": "",
+                    "id": "6faa8046-ebf6-4385-8fc3-bbf23f1090a9",
+                    "processDefId": "createNewUser_approver_process",
+                    "redirectUrlAfterComplete": "",
+                    "fieldPassover": ""
+                }
+            }],
+            "properties": {
+                "hide": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "category-811e95a7-bd51-4f0c-aa85-dbc984d25c62",
+                "label": "<i class=\"fa fa-users\"><\/i> New user? SignUp"
             }
         },
         {
