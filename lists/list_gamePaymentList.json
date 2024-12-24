@@ -8,9 +8,10 @@
     "rowActions": [],
     "columns": [
         {
-            "name": "razorpay_payment_link",
-            "id": "column_0",
-            "label": "razorpay_payment_link"
+            "name": "razorpay_payment_id",
+            "id": "column_3",
+            "label": "razorpay_payment_id",
+            "datalist_type": "column"
         },
         {
             "name": "payment_status",
@@ -18,14 +19,14 @@
             "label": "payment_status"
         },
         {
+            "name": "razorpay_payment_link",
+            "id": "column_0",
+            "label": "razorpay_payment_link"
+        },
+        {
             "name": "razorpay_plugin_properties",
             "id": "column_2",
             "label": "razorpay_plugin_properties"
-        },
-        {
-            "name": "razorpay_payment_id",
-            "id": "column_3",
-            "label": "razorpay_payment_id"
         },
         {
             "name": "razorpay_order_id",
