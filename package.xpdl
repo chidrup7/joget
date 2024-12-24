@@ -425,7 +425,7 @@
                     <Performer>gameRegistration_approver</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="736,128"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="735,158"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="payment" Name="Payment">
@@ -435,7 +435,7 @@
                     <Performer>gameRegistration_applicant</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_applicant"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="804,22"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="636,72"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="payment_done_email" Name="Payment Done Email">
@@ -445,7 +445,35 @@
                     <Performer>gameRegistration_applicant</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_applicant"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="970,64"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="933,30"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route2">
+                    <Route/>
+                    <Performer>gameRegistration_applicant</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition11"/>
+                                    <TransitionRef Id="transition13"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_applicant"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="833,109"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="payment_failed" Name="Payment Failed">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>gameRegistration_applicant</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gameRegistration_applicant"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="944,170"/>
                     </ExtendedAttributes>
                 </Activity>
             </Activities>
@@ -493,8 +521,19 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
-                <Transition From="payment" Id="transition11" To="payment_done_email">
-                    <Condition Type="CONDITION">status == "success"</Condition>
+                <Transition From="route2" Id="transition11" To="payment_done_email">
+                    <Condition Type="CONDITION">status == "Approved"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="payment" Id="transition12" To="route2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route2" Id="transition13" To="payment_failed">
+                    <Condition Type="OTHERWISE"/>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
@@ -503,8 +542,9 @@
             <ExtendedAttributes>
                 <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="gameRegistration_applicant;gameRegistration_approver"/>
                 <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_applicant,CONNECTING_ACTIVITY_ID=raise_request,X_OFFSET=55,Y_OFFSET=51,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_approver,CONNECTING_ACTIVITY_ID=payment_done_email,X_OFFSET=1015,Y_OFFSET=33,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_applicant,CONNECTING_ACTIVITY_ID=payment_done_email,X_OFFSET=1082,Y_OFFSET=90,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
                 <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_approver,CONNECTING_ACTIVITY_ID=request_rejected_email,X_OFFSET=1021,Y_OFFSET=138,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gameRegistration_applicant,CONNECTING_ACTIVITY_ID=payment_failed,X_OFFSET=1087.265625,Y_OFFSET=200,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
             </ExtendedAttributes>
         </WorkflowProcess>
     </WorkflowProcesses>

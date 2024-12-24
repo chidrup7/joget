@@ -128,6 +128,15 @@
                </packageActivityPlugin>
             </entry>
             <entry>
+               <string>gameRegistration_approver_process::payment_failed</string>
+               <packageActivityPlugin>
+                  <processDefId>gameRegistration_approver_process</processDefId>
+                  <activityDefId>payment_failed</activityDefId>
+                  <pluginName>org.joget.apps.app.lib.MultiTools</pluginName>
+                  <pluginProperties>{&quot;runInMultiThread&quot;:&quot;&quot;,&quot;comment&quot;:&quot;&quot;,&quot;tools&quot;:[{&quot;className&quot;:&quot;org.joget.apps.app.lib.EmailTool&quot;,&quot;properties&quot;:{&quot;cc&quot;:&quot;&quot;,&quot;toSpecific&quot;:&quot;#form.trainGame_reg.email#&quot;,&quot;bcc&quot;:&quot;&quot;,&quot;icsAttachement&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Payment Failed&quot;,&quot;retryCount&quot;:&quot;&quot;,&quot;formDefId&quot;:&quot;&quot;,&quot;toParticipantId&quot;:&quot;&quot;,&quot;message&quot;:&quot;Payment Failed.\n\nThank You.&quot;,&quot;p12&quot;:&quot;&quot;,&quot;security&quot;:&quot;TLS&quot;,&quot;password&quot;:&quot;%%%%ImX3rR4Za+QaHN1yxuFCJ7jfCMNWBMq+%%%%&quot;,&quot;storepass&quot;:&quot;%%%%ng1KR88MSuq+mybDwZDL0w==%%%%&quot;,&quot;port&quot;:&quot;587&quot;,&quot;isHtml&quot;:&quot;&quot;,&quot;host&quot;:&quot;smtp.office365.com&quot;,&quot;alias&quot;:&quot;&quot;,&quot;files&quot;:[],&quot;from&quot;:&quot;chidrup.y@technoforte.co.in&quot;,&quot;retryInterval&quot;:&quot;&quot;,&quot;fields&quot;:[],&quot;username&quot;:&quot;chidrup.y@technoforte.co.in&quot;}}]}</pluginProperties>
+               </packageActivityPlugin>
+            </entry>
+            <entry>
                <string>login_user::login_success_email</string>
                <packageActivityPlugin>
                   <processDefId>login_user</processDefId>
