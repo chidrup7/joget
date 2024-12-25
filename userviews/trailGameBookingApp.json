@@ -150,7 +150,7 @@
                 }
             }],
             "properties": {
-                "hide": "yes",
+                "hide": "",
                 "permission": {
                     "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
                     "properties": {}
@@ -214,7 +214,7 @@
                 }
             }],
             "properties": {
-                "hide": "yes",
+                "hide": "",
                 "permission": {
                     "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
                     "properties": {}
@@ -222,6 +222,70 @@
                 "comment": "",
                 "label": "Manage Game Details",
                 "id": "category-14937E9B98C04B9A43F6E99AFDB68E7A"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.plugin.enterprise.CrudMenu",
+                "properties": {
+                    "list-customFooter": "",
+                    "edit-customHeader": "",
+                    "editFormId": "gameRegistration",
+                    "cacheAllLinks": "",
+                    "edit-saveButtonLabel": "",
+                    "list-showDeleteButton": "",
+                    "list-newButtonLabel": "",
+                    "edit-prevButtonLabel": "",
+                    "enableOffline": "",
+                    "customId": "manage_game_registration",
+                    "edit-afterSavedReloadTarget": "true",
+                    "edit-afterSaved": "list",
+                    "checkboxPosition": "left",
+                    "selectionType": "multiple",
+                    "add-customFooter": "",
+                    "addFormId": "gameRegistration",
+                    "edit-allowRecordTraveling": "",
+                    "rowCount": "",
+                    "id": "970BE0ED36CE46616D301BAF10D0FC38",
+                    "edit-readonlyLabel": "true",
+                    "add-messageShowAfterComplete": "",
+                    "list-editLinkLabel": "",
+                    "add-cancelButtonLabel": "",
+                    "edit-customFooter": "",
+                    "add-afterSavedReloadTarget": "true",
+                    "keyName": "",
+                    "label": "Manage Game Registration",
+                    "list-newLinkTarget": "",
+                    "add-customHeader": "",
+                    "edit-lastButtonLabel": "",
+                    "edit-readonly": "",
+                    "buttonPosition": "bothLeft",
+                    "edit-firstButtonLabel": "",
+                    "datalistId": "list_gameRegistration",
+                    "add-saveButtonLabel": "",
+                    "edit-nextButtonLabel": "",
+                    "userviewCacheDuration": "20",
+                    "edit-messageShowAfterComplete": "",
+                    "cacheListAction": "",
+                    "userviewCacheScope": "",
+                    "edit-moreActions": [],
+                    "add-afterSaved": "list",
+                    "list-moreActions": [],
+                    "edit-backButtonLabel": "",
+                    "list-editLinkTarget": "",
+                    "list-customHeader": ""
+                }
+            }],
+            "properties": {
+                "hide": "",
+                "permission": {
+                    "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
+                    "properties": {}
+                },
+                "comment": "",
+                "label": "Manage Game Registration",
+                "id": "category-3DCEE7BA4B644D87AE6DF55BDE89B292"
             }
         },
         {
