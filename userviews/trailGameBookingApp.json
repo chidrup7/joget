@@ -366,7 +366,7 @@
                         "cancelButtonLabel": "",
                         "actionAfterSaved": "",
                         "id": "B092A79930484EFCBEAAA0001B2B104F",
-                        "redirectUrlAfterComplete": "#form.trailGame_pymtList.razorpay_payment_link#",
+                        "redirectUrlAfterComplete": "",
                         "fieldPassover": "",
                         "formId": "gamePayment",
                         "customHeader": "",
