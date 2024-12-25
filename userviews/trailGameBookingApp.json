@@ -54,7 +54,7 @@
                     "enableOffline": "",
                     "title": "Game Booking Report",
                     "customId": "game_booking_report",
-                    "chartHeight": "300%",
+                    "chartHeight": "30%",
                     "mapping_x": "trailGame_details.game",
                     "yaxisPrefix": "",
                     "categoryAxisLabel": "Category",
@@ -366,7 +366,7 @@
                         "cancelButtonLabel": "",
                         "actionAfterSaved": "",
                         "id": "B092A79930484EFCBEAAA0001B2B104F",
-                        "redirectUrlAfterComplete": "",
+                        "redirectUrlAfterComplete": "#form.trailGame_pymtList.razorpay_payment_link#",
                         "fieldPassover": "",
                         "formId": "gamePayment",
                         "customHeader": "",
@@ -376,7 +376,7 @@
                         "label": "Game Payment",
                         "userviewCacheDuration": "20",
                         "messageShowAfterComplete": "",
-                        "submitButtonLabel": "",
+                        "submitButtonLabel": "Pay With Razorpay",
                         "userviewCacheScope": "",
                         "readonlyLabel": "true"
                     }
