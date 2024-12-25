@@ -1,5 +1,20 @@
 {
-    "elements": [{"className": "menu-component"}],
+    "elements": [
+        {
+            "className": "org.joget.apps.userview.lib.component.ButtonComponent",
+            "properties": {
+                "attr-data-events-listening": [],
+                "attr-target": "_blank",
+                "css-display-type": "btn btn-primary",
+                "attr-onclick": "<script>\n  $(document).ready(function() {\n    // Attach a click event listener to the button\n    $('#pay_with_razorpay').on('click', function() {\n      // Get the value from the field dynamically (replace 'trailGame_pymtList.razorpay_payment_link' with your actual field name)\n      var paymentLink = $('#form\\\\.trailGame_pymtList\\\\.razorpay_payment_link').val(); \n      \n      // Check if the payment link is not empty\n      if(paymentLink) {\n        // Redirect to the Razorpay payment link\n        window.location.href = paymentLink;\n      } else {\n        alert('Payment link is missing.');\n      }\n    });\n  });\n<\/script>",
+                "textContent": "Pay with Razorpay",
+                "id": "1C9943F7C27C4C9987884CABA70093B3",
+                "attr-href": "#form.trailGame_pymtList.razorpay_payment_link#",
+                "customId": "pay_with_razorpay"
+            }
+        },
+        {"className": "menu-component"}
+    ],
     "className": "org.joget.apps.userview.model.UserviewPage",
     "properties": {"id": "up-B092A79930484EFCBEAAA0001B2B104F"}
 }

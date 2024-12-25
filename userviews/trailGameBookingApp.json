@@ -376,7 +376,7 @@
                         "label": "Game Payment",
                         "userviewCacheDuration": "20",
                         "messageShowAfterComplete": "",
-                        "submitButtonLabel": "Save",
+                        "submitButtonLabel": "Pay With Razorpay",
                         "userviewCacheScope": "",
                         "readonlyLabel": "true"
                     }
