@@ -70,7 +70,7 @@
                             "joins": [{
                                 "joinFieldId": "game_list",
                                 "tableName": "trailGame_details",
-                                "fieldId": "trailGame_details.game"
+                                "fieldId": "trailGame_details.id"
                             }],
                             "having": [],
                             "aggregateField": [{
