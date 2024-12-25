@@ -99,6 +99,70 @@
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
             "menus": [{
+                "className": "org.joget.plugin.enterprise.CrudMenu",
+                "properties": {
+                    "list-customFooter": "",
+                    "edit-customHeader": "",
+                    "editFormId": "createNewUser",
+                    "cacheAllLinks": "",
+                    "edit-saveButtonLabel": "",
+                    "list-showDeleteButton": "",
+                    "list-newButtonLabel": "",
+                    "edit-prevButtonLabel": "",
+                    "enableOffline": "",
+                    "customId": "manage_create_new_user",
+                    "edit-afterSavedReloadTarget": "true",
+                    "edit-afterSaved": "list",
+                    "checkboxPosition": "left",
+                    "selectionType": "multiple",
+                    "add-customFooter": "",
+                    "addFormId": "createNewUser",
+                    "edit-allowRecordTraveling": "",
+                    "rowCount": "",
+                    "id": "E687394114E74079A760CE2B093B7C99",
+                    "edit-readonlyLabel": "true",
+                    "add-messageShowAfterComplete": "",
+                    "list-editLinkLabel": "",
+                    "add-cancelButtonLabel": "",
+                    "edit-customFooter": "",
+                    "add-afterSavedReloadTarget": "true",
+                    "keyName": "",
+                    "label": "Manage Create New User",
+                    "list-newLinkTarget": "",
+                    "add-customHeader": "",
+                    "edit-lastButtonLabel": "",
+                    "edit-readonly": "",
+                    "buttonPosition": "bothLeft",
+                    "edit-firstButtonLabel": "",
+                    "datalistId": "list_createNewUser",
+                    "add-saveButtonLabel": "",
+                    "edit-nextButtonLabel": "",
+                    "userviewCacheDuration": "20",
+                    "edit-messageShowAfterComplete": "",
+                    "cacheListAction": "",
+                    "userviewCacheScope": "",
+                    "edit-moreActions": [],
+                    "add-afterSaved": "list",
+                    "list-moreActions": [],
+                    "edit-backButtonLabel": "",
+                    "list-editLinkTarget": "",
+                    "list-customHeader": ""
+                }
+            }],
+            "properties": {
+                "hide": "yes",
+                "permission": {
+                    "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
+                    "properties": {}
+                },
+                "comment": "",
+                "label": "Manage Create New User",
+                "id": "category-3F6C7FF3F2924F8295A707D42EA4019C"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
                 "className": "org.joget.apps.userview.lib.RunProcess",
                 "properties": {
                     "runProcessDirectly": "Yes",
