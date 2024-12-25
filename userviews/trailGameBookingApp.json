@@ -45,6 +45,42 @@
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
             "menus": [{
+                "className": "org.joget.apps.userview.lib.RunProcess",
+                "properties": {
+                    "runProcessDirectly": "Yes",
+                    "fieldPassoverMethod": "append",
+                    "keyName": "",
+                    "label": "Run Process",
+                    "redirectTarget": "",
+                    "enableOffline": "",
+                    "afterSavedReloadTarget": "true",
+                    "customId": "",
+                    "userviewCacheDuration": "20",
+                    "messageShowAfterComplete": "",
+                    "showInPopupDialog": "",
+                    "userviewCacheScope": "",
+                    "actionAfterSaved": "",
+                    "runProcessSubmitLabel": "",
+                    "id": "08F8D8E7B4224D5D4D43FE599D1922E2",
+                    "processDefId": "createNewUser_approver_process",
+                    "redirectUrlAfterComplete": "",
+                    "fieldPassover": ""
+                }
+            }],
+            "properties": {
+                "hide": "yes",
+                "permission": {
+                    "className": "org.joget.plugin.enterprise.AnonymousUserviewPermission",
+                    "properties": {}
+                },
+                "comment": "",
+                "label": "signup",
+                "id": "category-AD1BBEF40C3743DE2717623931D1C12A"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
                 "className": "org.joget.plugin.enterprise.SqlChartMenu",
                 "properties": {
                     "stack": "",
