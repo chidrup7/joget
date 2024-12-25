@@ -7,9 +7,6 @@
     </PackageHeader>
     <Script Type="text/javascript"/>
     <Participants>
-        <Participant Id="createNewUser_approver" Name="Approver">
-            <ParticipantType Type="ROLE"/>
-        </Participant>
         <Participant Id="createNewUser_applicant" Name="Applicant">
             <ParticipantType Type="ROLE"/>
         </Participant>
@@ -37,16 +34,6 @@
                 </DataField>
             </DataFields>
             <Activities>
-                <Activity Id="clarification" Name="Clarification">
-                    <Implementation>
-                        <No/>
-                    </Implementation>
-                    <Performer>createNewUser_applicant</Performer>
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="325,38"/>
-                    </ExtendedAttributes>
-                </Activity>
                 <Activity Id="email_on_received" Name="Email on Received">
                     <Implementation>
                         <Tool Id="default_application"/>
@@ -57,50 +44,6 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="144,40"/>
                     </ExtendedAttributes>
                 </Activity>
-                <Activity Id="approval" Name="Approval">
-                    <Implementation>
-                        <No/>
-                    </Implementation>
-                    <Performer>createNewUser_approver</Performer>
-                    <TransitionRestrictions>
-                        <TransitionRestriction>
-                            <Join Type="XOR"/>
-                        </TransitionRestriction>
-                    </TransitionRestrictions>
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="145,46"/>
-                    </ExtendedAttributes>
-                </Activity>
-                <Activity Id="route1" Name="Route 1">
-                    <Route/>
-                    <Performer>createNewUser_approver</Performer>
-                    <TransitionRestrictions>
-                        <TransitionRestriction>
-                            <Split Type="XOR">
-                                <TransitionRefs>
-                                    <TransitionRef Id="transition6"/>
-                                    <TransitionRef Id="transition3"/>
-                                    <TransitionRef Id="transition7"/>
-                                </TransitionRefs>
-                            </Split>
-                        </TransitionRestriction>
-                    </TransitionRestrictions>
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="642,50"/>
-                    </ExtendedAttributes>
-                </Activity>
-                <Activity Id="update_status" Name="Update Record Status">
-                    <Implementation>
-                        <Tool Id="default_application"/>
-                    </Implementation>
-                    <Performer>createNewUser_approver</Performer>
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="396,45"/>
-                    </ExtendedAttributes>
-                </Activity>
                 <Activity Id="email_on_approved" Name="Email on Approved">
                     <Implementation>
                         <Tool Id="default_application"/>
@@ -108,17 +51,7 @@
                     <Performer>createNewUser_applicant</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="986,32"/>
-                    </ExtendedAttributes>
-                </Activity>
-                <Activity Id="email_on_rejected" Name="Email on Rejected">
-                    <Implementation>
-                        <Tool Id="default_application"/>
-                    </Implementation>
-                    <Performer>createNewUser_approver</Performer>
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_approver"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="891,119"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="766,47"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="create_user_record" Name="Create User Record">
@@ -128,7 +61,7 @@
                     <Performer>createNewUser_applicant</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="637,19"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="337,41"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="create_userrole_record" Name="Create UserRole Record">
@@ -138,49 +71,11 @@
                     <Performer>createNewUser_applicant</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="833,15"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="557,43"/>
                     </ExtendedAttributes>
                 </Activity>
             </Activities>
             <Transitions>
-                <Transition From="email_on_received" Id="transition1" To="approval">
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
-                    </ExtendedAttributes>
-                </Transition>
-                <Transition From="approval" Id="transition2" To="update_status">
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
-                    </ExtendedAttributes>
-                </Transition>
-                <Transition From="route1" Id="transition3" To="clarification">
-                    <Condition Type="CONDITION">status == "Clarification Required"</Condition>
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
-                    </ExtendedAttributes>
-                </Transition>
-                <Transition From="clarification" Id="transition4" To="approval">
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
-                    </ExtendedAttributes>
-                </Transition>
-                <Transition From="update_status" Id="transition5" To="route1">
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
-                    </ExtendedAttributes>
-                </Transition>
-                <Transition From="route1" Id="transition6" To="create_user_record">
-                    <Condition Type="CONDITION">status == "Approved"</Condition>
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
-                    </ExtendedAttributes>
-                </Transition>
-                <Transition From="route1" Id="transition7" To="email_on_rejected">
-                    <Condition Type="OTHERWISE"/>
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
-                    </ExtendedAttributes>
-                </Transition>
                 <Transition From="create_user_record" Id="transition10" To="create_userrole_record">
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
@@ -191,12 +86,16 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
+                <Transition From="email_on_received" Id="transition4" To="create_user_record">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
             </Transitions>
             <ExtendedAttributes>
-                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="createNewUser_applicant;createNewUser_approver"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="createNewUser_applicant"/>
                 <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_applicant,CONNECTING_ACTIVITY_ID=email_on_received,X_OFFSET=55,Y_OFFSET=51,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_applicant,CONNECTING_ACTIVITY_ID=email_on_approved,X_OFFSET=1084,Y_OFFSET=124,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_approver,CONNECTING_ACTIVITY_ID=email_on_rejected,X_OFFSET=1101,Y_OFFSET=132,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_applicant,CONNECTING_ACTIVITY_ID=email_on_approved,X_OFFSET=946,Y_OFFSET=74,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
             </ExtendedAttributes>
         </WorkflowProcess>
         <WorkflowProcess Id="login_user" Name="Login User">
