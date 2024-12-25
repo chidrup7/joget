@@ -34,16 +34,6 @@
                 </DataField>
             </DataFields>
             <Activities>
-                <Activity Id="email_on_received" Name="Email on Received">
-                    <Implementation>
-                        <Tool Id="default_application"/>
-                    </Implementation>
-                    <Performer>createNewUser_applicant</Performer>
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="144,40"/>
-                    </ExtendedAttributes>
-                </Activity>
                 <Activity Id="email_on_approved" Name="Email on Approved">
                     <Implementation>
                         <Tool Id="default_application"/>
@@ -51,7 +41,7 @@
                     <Performer>createNewUser_applicant</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="766,47"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="630,31"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="create_user_record" Name="Create User Record">
@@ -61,7 +51,7 @@
                     <Performer>createNewUser_applicant</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="337,41"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="200,29"/>
                     </ExtendedAttributes>
                 </Activity>
                 <Activity Id="create_userrole_record" Name="Create UserRole Record">
@@ -71,7 +61,7 @@
                     <Performer>createNewUser_applicant</Performer>
                     <ExtendedAttributes>
                         <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="createNewUser_applicant"/>
-                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="557,43"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="421,32"/>
                     </ExtendedAttributes>
                 </Activity>
             </Activities>
@@ -86,16 +76,11 @@
                         <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
                     </ExtendedAttributes>
                 </Transition>
-                <Transition From="email_on_received" Id="transition4" To="create_user_record">
-                    <ExtendedAttributes>
-                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
-                    </ExtendedAttributes>
-                </Transition>
             </Transitions>
             <ExtendedAttributes>
                 <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="createNewUser_applicant"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_applicant,CONNECTING_ACTIVITY_ID=email_on_received,X_OFFSET=55,Y_OFFSET=51,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
-                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_applicant,CONNECTING_ACTIVITY_ID=email_on_approved,X_OFFSET=946,Y_OFFSET=74,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_applicant,CONNECTING_ACTIVITY_ID=create_user_record,X_OFFSET=55,Y_OFFSET=51,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=createNewUser_applicant,CONNECTING_ACTIVITY_ID=email_on_approved,X_OFFSET=821,Y_OFFSET=53,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
             </ExtendedAttributes>
         </WorkflowProcess>
         <WorkflowProcess Id="login_user" Name="Login User">

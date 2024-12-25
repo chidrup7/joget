@@ -34,7 +34,7 @@
          <id>SignupNo</id>
          <appId>trailGameApp</appId>
          <appVersion>1</appVersion>
-         <value>2</value>
+         <value>3</value>
          <remarks>Used for plugin: Id Generator Field</remarks>
       </environmentVariable>
    </environmentVariableList>
