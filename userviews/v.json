@@ -449,7 +449,7 @@
                     "redirectTarget": "",
                     "enableOffline": "",
                     "customId": "sign_up",
-                    "messageShowAfterComplete": "Please Login to our Application To Book to your gaming slots.\n\nThank you.",
+                    "messageShowAfterComplete": "Please use this http://localhost:8080/jw/web/userview/trailGameApp/trailGameBookingApp/_/welcome and login to Book the game\n\nThank you.",
                     "userviewCacheDuration": "",
                     "showInPopupDialog": "",
                     "userviewCacheScope": "",
