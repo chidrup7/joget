@@ -23,7 +23,7 @@
                         "style": "",
                         "id": "name",
                         "placeholder": "",
-                        "value": "",
+                        "value": "#performer.runProcess.username#",
                         "readonlyLabel": "",
                         "storeNumeric": ""
                     }
