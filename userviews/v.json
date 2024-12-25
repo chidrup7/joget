@@ -449,7 +449,7 @@
                     "redirectTarget": "",
                     "enableOffline": "",
                     "customId": "sign_up",
-                    "messageShowAfterComplete": "",
+                    "messageShowAfterComplete": "Please Login to our Application To Book to your gaming slots.\n\nThank you.",
                     "userviewCacheDuration": "",
                     "showInPopupDialog": "",
                     "userviewCacheScope": "",
