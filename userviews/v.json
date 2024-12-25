@@ -842,6 +842,6 @@
             "className": "org.joget.plugin.enterprise.AnonymousUserviewPermission",
             "properties": {}
         },
-        "userviewName": "Trail Game Application"
+        "userviewName": "Trail Game Application Login"
     }}
 }
