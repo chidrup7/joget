@@ -55,6 +55,85 @@
                 "label": "Game Booking",
                 "id": "category-FEBFD42B31294BFC072ED3812CFF4C84"
             }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "actionOnCancel": "",
+                        "redirectTargetOnCancel": "top",
+                        "customFooter": "",
+                        "paramName": "",
+                        "enableOffline": "",
+                        "afterSavedReloadTarget": "true",
+                        "customId": "game_payment",
+                        "showInPopupDialog": "",
+                        "readonly": "",
+                        "cancelButtonLabel": "",
+                        "actionAfterSaved": "",
+                        "id": "B092A79930484EFCBEAAA0001B2B104F",
+                        "redirectUrlAfterComplete": "",
+                        "fieldPassover": "",
+                        "formId": "gamePayment",
+                        "customHeader": "",
+                        "fieldPassoverMethod": "append",
+                        "redirectTargetOnComplete": "",
+                        "keyName": "",
+                        "label": "Game Payment",
+                        "userviewCacheDuration": "20",
+                        "messageShowAfterComplete": "",
+                        "submitButtonLabel": "",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": "true"
+                    }
+                },
+                {
+                    "className": "org.joget.apps.userview.lib.FormMenu",
+                    "properties": {
+                        "loadDataWithKey": "",
+                        "redirectUrlOnCancel": "",
+                        "actionOnCancel": "",
+                        "redirectTargetOnCancel": "top",
+                        "customFooter": "",
+                        "paramName": "",
+                        "enableOffline": "",
+                        "afterSavedReloadTarget": "true",
+                        "customId": "payment_confirmation_page",
+                        "showInPopupDialog": "",
+                        "readonly": "",
+                        "cancelButtonLabel": "",
+                        "actionAfterSaved": "",
+                        "id": "81B64CD2F6394DFD41D178C87047F65E",
+                        "redirectUrlAfterComplete": "",
+                        "fieldPassover": "",
+                        "formId": "gamePaymentConfirmationPage",
+                        "customHeader": "",
+                        "fieldPassoverMethod": "append",
+                        "redirectTargetOnComplete": "",
+                        "keyName": "",
+                        "label": "Payment Confirmation Page",
+                        "userviewCacheDuration": "20",
+                        "messageShowAfterComplete": "",
+                        "submitButtonLabel": "",
+                        "userviewCacheScope": "",
+                        "readonlyLabel": "true"
+                    }
+                }
+            ],
+            "properties": {
+                "hide": "yes",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.LoggedInUserPermission",
+                    "properties": {}
+                },
+                "comment": "",
+                "label": "Redirection",
+                "id": "category-3862C7C49FB64D45275BF53CAC2393D0"
+            }
         }
     ],
     "properties": {
