@@ -54,7 +54,7 @@
                     "enableOffline": "",
                     "title": "Chart Title",
                     "customId": "game_booking_report",
-                    "chartHeight": "30%",
+                    "chartHeight": "300%",
                     "mapping_x": "trailGame_details.game",
                     "yaxisPrefix": "",
                     "categoryAxisLabel": "Category",
