@@ -839,8 +839,11 @@
             }
         },
         "permission": {
-            "className": "org.joget.plugin.enterprise.AnonymousUserviewPermission",
-            "properties": {}
+            "className": "org.joget.apps.userview.lib.UserPermission",
+            "properties": {
+                "allowedUsernames": "",
+                "orgId": ""
+            }
         },
         "userviewName": "Trail Game Application Login"
     }}
