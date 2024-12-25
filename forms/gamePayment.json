@@ -74,7 +74,7 @@
                         "style": "",
                         "id": "total_amount",
                         "placeholder": "",
-                        "value": "#form.trailGame_details.amount_per_hour#",
+                        "value": "",
                         "readonlyLabel": "",
                         "storeNumeric": ""
                     }
