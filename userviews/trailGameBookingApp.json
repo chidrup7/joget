@@ -355,20 +355,20 @@
                     "fieldPassoverMethod": "append",
                     "keyName": "",
                     "label": "Game Booking",
-                    "redirectTarget": "",
+                    "redirectTarget": "parent",
                     "enableOffline": "",
                     "afterSavedReloadTarget": "true",
                     "customId": "game_booking",
                     "userviewCacheDuration": "20",
-                    "messageShowAfterComplete": "",
+                    "messageShowAfterComplete": "Your Application for the Game Booking has been received.\n\nPlease Check you Inbox, you will get notified once Approved.\n\nThank you.",
                     "showInPopupDialog": "",
                     "userviewCacheScope": "",
                     "actionAfterSaved": "",
-                    "runProcessSubmitLabel": "",
+                    "runProcessSubmitLabel": "Pay",
                     "id": "1846ED32D187448B7CDC6C9987F163CC",
                     "processDefId": "gameRegistration_approver_process",
-                    "redirectUrlAfterComplete": "",
-                    "fieldPassover": ""
+                    "redirectUrlAfterComplete": "http://localhost:8080/jw/web/userview/trailGameApp/trailGameBookingApp/_/welcome",
+                    "fieldPassover": "#form.trailGame_pymtList.razorpay_payment_link#"
                 }
             }],
             "properties": {
