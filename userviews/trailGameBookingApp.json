@@ -371,7 +371,7 @@
                         "formId": "gamePayment",
                         "customHeader": "",
                         "fieldPassoverMethod": "append",
-                        "redirectTargetOnComplete": "",
+                        "redirectTargetOnComplete": "top",
                         "keyName": "",
                         "label": "Game Payment",
                         "userviewCacheDuration": "20",
