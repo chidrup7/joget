@@ -457,7 +457,7 @@
                     "runProcessSubmitLabel": "",
                     "id": "6faa8046-ebf6-4385-8fc3-bbf23f1090a9",
                     "processDefId": "createNewUser_approver_process",
-                    "redirectUrlAfterComplete": "localhost:8080/jw/web/userview/trailGameApp/trailGameBookingApp/_/welcome",
+                    "redirectUrlAfterComplete": "http://localhost:8080/jw/web/userview/trailGameApp/trailGameBookingApp/_/welcome",
                     "fieldPassover": ""
                 }
             }],
