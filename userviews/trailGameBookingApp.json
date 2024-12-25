@@ -163,6 +163,70 @@
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
             "menus": [{
+                "className": "org.joget.plugin.enterprise.CrudMenu",
+                "properties": {
+                    "list-customFooter": "",
+                    "edit-customHeader": "",
+                    "editFormId": "gameDetails",
+                    "cacheAllLinks": "",
+                    "edit-saveButtonLabel": "",
+                    "list-showDeleteButton": "",
+                    "list-newButtonLabel": "",
+                    "edit-prevButtonLabel": "",
+                    "enableOffline": "",
+                    "customId": "manage_game_details",
+                    "edit-afterSavedReloadTarget": "true",
+                    "edit-afterSaved": "list",
+                    "checkboxPosition": "left",
+                    "selectionType": "multiple",
+                    "add-customFooter": "",
+                    "addFormId": "gameDetails",
+                    "edit-allowRecordTraveling": "",
+                    "rowCount": "",
+                    "id": "B964F9F2A04047F9F0F2EBBEABA35CEF",
+                    "edit-readonlyLabel": "true",
+                    "add-messageShowAfterComplete": "",
+                    "list-editLinkLabel": "",
+                    "add-cancelButtonLabel": "",
+                    "edit-customFooter": "",
+                    "add-afterSavedReloadTarget": "true",
+                    "keyName": "",
+                    "label": "Manage Game Details",
+                    "list-newLinkTarget": "",
+                    "add-customHeader": "",
+                    "edit-lastButtonLabel": "",
+                    "edit-readonly": "",
+                    "buttonPosition": "bothLeft",
+                    "edit-firstButtonLabel": "",
+                    "datalistId": "list_gameDetails",
+                    "add-saveButtonLabel": "",
+                    "edit-nextButtonLabel": "",
+                    "userviewCacheDuration": "20",
+                    "edit-messageShowAfterComplete": "",
+                    "cacheListAction": "",
+                    "userviewCacheScope": "",
+                    "edit-moreActions": [],
+                    "add-afterSaved": "list",
+                    "list-moreActions": [],
+                    "edit-backButtonLabel": "",
+                    "list-editLinkTarget": "",
+                    "list-customHeader": ""
+                }
+            }],
+            "properties": {
+                "hide": "yes",
+                "permission": {
+                    "className": "org.joget.plugin.enterprise.AdminUserviewPermission",
+                    "properties": {}
+                },
+                "comment": "",
+                "label": "Manage Game Details",
+                "id": "category-14937E9B98C04B9A43F6E99AFDB68E7A"
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
                 "className": "org.joget.apps.userview.lib.RunProcess",
                 "properties": {
                     "runProcessDirectly": "Yes",
