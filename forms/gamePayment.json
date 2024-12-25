@@ -138,7 +138,7 @@
         "postProcessor": {
             "className": "org.joget.marketplace.PaymentProcessorTool",
             "properties": {
-                "redirectUserviewMenu": "v",
+                "redirectUserviewMenu": "trailGameBookingApp",
                 "totalAmount": "#form.trailGame_payment.total_amount#",
                 "razorApiKey": "#appVariable.razorpay_api_key#",
                 "formDefId": "gamePaymentList",
