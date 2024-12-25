@@ -1,6 +1,5 @@
 {
     "elements": [
-        {"className": "menu-component"},
         {
             "className": "org.joget.apps.userview.lib.component.ButtonComponent",
             "properties": {
@@ -12,7 +11,8 @@
                 "id": "1C9943F7C27C4C9987884CABA70093B3",
                 "customId": "pay_with_razorpay"
             }
-        }
+        },
+        {"className": "menu-component"}
     ],
     "className": "org.joget.apps.userview.model.UserviewPage",
     "properties": {"id": "up-B092A79930484EFCBEAAA0001B2B104F"}
