@@ -86,7 +86,7 @@
                         "autoPopulate": "",
                         "label": "",
                         "id": "game_payment_html",
-                        "value": "<a href=\"#form.trailGame_pymtList.razorpay_payment_link#\">Pay with RazorPay<\/a>\n\n<script>\n  $(document).ready(function() {\n    // On form submit or button click, check if the Razorpay payment link exists\n    $('#Complete').on('click', function() {\n      // Get the Razorpay payment link value\n      var razorpayLink = $('#form\\\\.trailGame_pymtList\\\\.razorpay_payment_link').val();\n      \n      if (razorpayLink) {\n        // Redirect the user to the Razorpay payment link\n        window.location.href = razorpayLink;\n      } else {\n        alert(\"Payment link not generated yet.\");\n      }\n    });\n  });\n<\/script>\n"
+                        "value": "<a href=\"#form.trailGame_pymtList.razorpay_payment_link#\">Pay with Razorpay<\/a>\n\n<script>\n  $(document).ready(function() {\n    // When the 'Continue' button is clicked, check if the Razorpay payment link exists\n    $('#Complete').on('click', function() {\n      // Get the Razorpay payment link value using jQuery\n      var razorpayLink = $('#form\\\\.trailGame_pymtList\\\\.razorpay_payment_link').val();\n\n      // Check if the Razorpay payment link exists\n      if (razorpayLink) {\n        // Redirect the user to the Razorpay payment link\n        window.location.href = razorpayLink;\n      } else {\n        alert(\"Payment link not generated yet.\");\n      }\n    });\n  });\n<\/script>\n\n"
                     }
                 }
             ],
