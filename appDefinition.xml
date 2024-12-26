@@ -272,6 +272,14 @@
    <messageList/>
    <resourceList>
       <appResource>
+         <id>playo-2.jpg</id>
+         <appId>trailGameApp</appId>
+         <appVersion>1</appVersion>
+         <filesize>138286</filesize>
+         <permissionClass></permissionClass>
+         <permissionProperties>{&quot;permission&quot;: { &quot;className&quot;: &quot;&quot;, &quot;properties&quot;: {}}}</permissionProperties>
+      </appResource>
+      <appResource>
          <id>Playo-Trademark-Logo-06.png</id>
          <appId>trailGameApp</appId>
          <appVersion>1</appVersion>
