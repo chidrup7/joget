@@ -1,4 +1,8 @@
 {
+    "template": {
+        "className": "",
+        "properties": {}
+    },
     "useSession": "false",
     "showPageSizeSelector": "true",
     "rowActions": [],
@@ -24,9 +28,20 @@
             "label": "Email"
         },
         {
-            "name": "password",
+            "filterable": true,
+            "hidden": "false",
+            "name": "dateCreated",
             "id": "column_4",
-            "label": "Password"
+            "label": "Date Created",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "approval_status",
+            "id": "column_5",
+            "label": "approval_status",
+            "sortable": "false"
         }
     ],
     "pageSize": 0,
