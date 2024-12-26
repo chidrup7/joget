@@ -8,16 +8,6 @@
     "rowActions": [],
     "columns": [
         {
-            "name": "name",
-            "id": "column_0",
-            "label": "Name"
-        },
-        {
-            "name": "number",
-            "id": "column_1",
-            "label": "Number"
-        },
-        {
             "name": "email",
             "id": "column_2",
             "label": "Email"
@@ -71,6 +61,14 @@
             "label": "Game List"
         },
         {
+            "filterable": true,
+            "hidden": "false",
+            "name": "dateCreated",
+            "id": "column_0",
+            "label": "Date Created",
+            "sortable": "false"
+        },
+        {
             "name": "date_from",
             "format": {
                 "className": "org.joget.plugin.enterprise.DateFormatter",
@@ -78,6 +76,14 @@
             },
             "id": "column_4",
             "label": "Date From"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "date_to",
+            "id": "column_1",
+            "label": "Date To",
+            "sortable": "false"
         }
     ],
     "pageSize": 0,
