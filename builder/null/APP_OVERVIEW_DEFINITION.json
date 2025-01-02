@@ -339,8 +339,23 @@
         "lastModifiedDate": "Dec 24, 2024, 11:26:56 AM"
     },
     "form:gameRegistration": {
-        "data": [],
-        "lastModifiedDate": "Dec 26, 2024, 9:49:28 AM"
+        "data": [
+            {
+                "path": "elements[0].elements[0].elements[0].properties.value",
+                "isError": false,
+                "label": "#currentUser.fullName#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#currentUser.fullName#"
+            },
+            {
+                "path": "elements[0].elements[0].elements[1].properties.value",
+                "isError": false,
+                "label": "#currentUser.email#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#currentUser.email#"
+            }
+        ],
+        "lastModifiedDate": "Jan 2, 2025, 2:34:47 PM"
     },
     "form:gamePaymentConfirmationPage": {
         "data": [
@@ -388,7 +403,7 @@
     },
     "datalist:list_gameRegistration": {
         "data": [],
-        "lastModifiedDate": "Dec 26, 2024, 11:19:52 AM"
+        "lastModifiedDate": "Jan 2, 2025, 2:35:41 PM"
     },
     "form:createNewUser_approval": {
         "data": [],
