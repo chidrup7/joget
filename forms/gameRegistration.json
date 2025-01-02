@@ -3,29 +3,29 @@
         "elements": [{
             "elements": [
                 {
-                    "className": "org.joget.apps.form.lib.TextField",
+                    "className": "org.joget.apps.form.lib.HiddenField",
                     "properties": {
-                        "requiredSanitize": "",
-                        "maxlength": "",
+                        "useDefaultWhenEmpty": "",
                         "validator": {
-                            "className": "org.joget.apps.form.lib.DefaultValidator",
-                            "properties": {
-                                "type": "email",
-                                "message": "Enter a valid email id",
-                                "mandatory": "true"
-                            }
+                            "className": "",
+                            "properties": {}
                         },
-                        "label": "Email",
-                        "encryption": "",
-                        "readonly": "",
-                        "size": "",
                         "workflowVariable": "",
-                        "style": "",
+                        "id": "name",
+                        "value": "#currentUser.fullName#"
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.HiddenField",
+                    "properties": {
+                        "useDefaultWhenEmpty": "",
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "workflowVariable": "",
                         "id": "email",
-                        "placeholder": "",
-                        "value": "",
-                        "readonlyLabel": "",
-                        "storeNumeric": ""
+                        "value": "#currentUser.email#"
                     }
                 },
                 {
