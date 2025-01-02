@@ -13,6 +13,14 @@
             "label": "Name"
         },
         {
+            "filterable": true,
+            "hidden": "false",
+            "name": "name1",
+            "id": "column_6",
+            "label": "name1",
+            "sortable": "false"
+        },
+        {
             "name": "number",
             "id": "column_1",
             "label": "Number"
@@ -21,6 +29,14 @@
             "name": "email",
             "id": "column_2",
             "label": "Email"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "email1",
+            "id": "column_7",
+            "label": "email1",
+            "sortable": "false"
         },
         {
             "filterable": true,
