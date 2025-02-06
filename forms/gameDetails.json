@@ -86,6 +86,11 @@
                                 "label": "No",
                                 "value": "No",
                                 "grouping": ""
+                            },
+                            {
+                                "label": "Undefined",
+                                "value": "Undefined",
+                                "grouping": ""
                             }
                         ],
                         "validator": {
